@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.ekadsoft.pharmae4.LoginViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorWhite"
+        android:padding="30dp"
+        android:layout_height="match_parent"
+        tools:context=".View.Activities.LoginActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:src="@drawable/logo2"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_b"
+                android:textStyle="normal"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="8sp"
+                android:text="@string/login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_b"
+                android:textStyle="normal"
+                android:textSize="35sp"
+                android:layout_marginTop="30dp"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="10sp"
+                android:text="@string/welcome_back" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:layout_marginTop="25dp"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="start"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/email"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textDirection="ltr"
+                android:onTextChanged="@{viewmodel::onEmailChanged}"
+                android:layout_marginTop="6dp"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:background="@drawable/shape_rounded_gray_stroke"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                android:layout_marginStart="3dp"
+                android:layout_gravity="start"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/password" />
+
+            <EditText
+                android:id="@+id/Password"
+                android:layout_marginTop="6dp"
+                android:paddingEnd="10dp"
+                android:textDirection="ltr"
+                android:onTextChanged="@{viewmodel::onPasswordChanged}"
+                android:paddingStart="10dp"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:background="@drawable/shape_rounded_gray_stroke"
+                android:layout_height="40dp" />
+
+
+            <TextView
+                android:id="@+id/forgetPassword"
+                android:layout_width="wrap_content"
+                android:onClick="@{()->viewmodel.forget()}"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_b"
+                android:textStyle="normal"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="#8d8b8b"
+                android:layout_gravity="end"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/forget_password" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login"
+                android:onClick="@{()->viewmodel.login()}"
+                android:backgroundTint="#1277d1"
+                android:layout_width="160dp"
+                app:cornerRadius="10dp"
+                android:text="@string/login"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="40dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

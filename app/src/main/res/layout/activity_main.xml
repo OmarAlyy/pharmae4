@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.ekadsoft.pharmae4.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".UI.Activities.MainActivity">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:src="@drawable/logo2"
+                android:layout_gravity="start|center"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                tools:text="Home"
+                />
+
+
+            <ImageView
+                android:id="@+id/inbox"
+                android:layout_width="24dp"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/ic_inbox"
+                android:layout_gravity="end|center"
+                android:layout_height="24dp" />
+
+            <ImageView
+                android:id="@+id/notification"
+                android:layout_width="24dp"
+                android:src="@drawable/ic_notification"
+                android:layout_gravity="end|center"
+                android:layout_height="24dp" />
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+
+            app:cardPreventCornerOverlap="true"
+            android:layout_height="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/framHome"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+android:onClick="@{()->viewmodel.showFragment(1)}"
+
+
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iconHome"
+                        android:layout_width="20dp"
+                        android:tint="@{viewmodel.itemSelector==1 ? @color/colorPrimary : @color/grayBottom}"
+
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_home"
+                        android:layout_height="20dp" />
+
+
+                    <TextView
+                        android:id="@+id/titleHome"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:textColor="@{viewmodel.itemSelector==1 ? @color/colorPrimary : @color/grayBottom}"
+
+                        android:text="@string/home"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/framClient"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{()->viewmodel.showFragment(2)}"
+
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iconClient"
+                        android:layout_width="20dp"
+                        android:layout_gravity="center"
+                        android:tint="@{viewmodel.itemSelector==2 ? @color/colorPrimary : @color/grayBottom}"
+                        android:src="@drawable/ic_client"
+                        android:layout_height="20dp" />
+
+
+                    <TextView
+                        android:id="@+id/titleClient"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@{viewmodel.itemSelector==2 ? @color/colorPrimary : @color/grayBottom}"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="@string/Client"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/framBlog"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{()->viewmodel.showFragment(3)}"
+
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iconBlog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_blog"
+                        android:tint="@{viewmodel.itemSelector==3 ? @color/colorPrimary : @color/grayBottom}"
+ />
+
+
+                    <TextView
+                        android:id="@+id/titleBlog"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                         android:textColor="@{viewmodel.itemSelector==3 ? @color/colorPrimary : @color/grayBottom}"
+
+                        android:text="@string/Blog"
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/framMore"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="@{()->viewmodel.showFragment(4)}"
+
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iconMore"
+                        android:layout_width="20dp"
+                        android:tint="@{viewmodel.itemSelector==4 ? @color/colorPrimary : @color/grayBottom}"
+
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_more_unactive"
+                        android:layout_height="20dp" />
+
+
+                    <TextView
+                        android:id="@+id/titleMore"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@{viewmodel.itemSelector==4 ? @color/colorPrimary : @color/grayBottom}"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="@string/More"
+                        />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:layout_height="match_parent"
+        tools:context=".View.Fragments.HomeFragment">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="24dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:padding="6dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image"
+                    android:src="@drawable/vector_drawable_cicrle_"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginStart="14dp"
+
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="8sp"
+                            android:text="@string/welcome" />
+
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:textStyle="normal"
+                            android:textSize="18sp"
+                            android:textColor="#4f4f4f"
+                            android:lineSpacingExtra="6sp"
+                            android:gravity="center_horizontal"
+                            android:text="Hossam Ali" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:textColor="#4f4f4f"
+                        android:lineSpacingExtra="5sp"
+                        android:text="@string/have_a_nice_day_at_work" />
+
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textStyle="normal"
+                        android:textSize="10sp"
+                        android:textColor="#8d8b8b"
+                        android:lineSpacingExtra="4sp"
+                        android:text="August11,2020" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="24dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+            <noman.weekcalendar.WeekCalendar
+                android:id="@+id/weekCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                app:numOfPages="150"
+                app:daysTextColor="@color/text"
+                app:weekTextColor="@color/colorPrimary"
+                app:selectedBgColor="@color/colorPrimary"
+                app:weekBackgroundColor="@color/white"
+app:daysBackgroundColor="@color/white"
+                android:layout_margin="10dp"
+                app:dayNameLength="threeLetters"
+                app:todaysDateBgColor="@color/colorPrimary"
+                />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="24dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:padding="6dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:textColor="#1277d1"
+                        android:lineSpacingExtra="5sp"
+                        android:text="Total Visits " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/TotalVisits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="13sp"
+                        android:textColor="#1277d1"
+                        android:lineSpacingExtra="4sp"
+                        tools:text="40" />
+
+
+                </LinearLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar5"
+                style="@style/MyProgressBarTwo"
+                    android:layout_height="10dp"
+                    android:layout_width="match_parent"
+                android:theme="@style/MyProgressBarTwo"
+                android:progress="30"
+                android:secondaryProgress="60"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardClinics"
+            android:layout_width="match_parent"
+
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="12dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="65dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="match_parent" />
+
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:padding="12dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/vector_drawable_circle_gray"
+                    android:src="@drawable/ic_hospital"
+                    android:layout_height="38dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="9dp"
+                    android:textColor="#4f4f4f"
+                    android:text="@string/clinics"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            android:layout_weight="1"    />
+
+                <TextView
+                    android:id="@+id/ClinicsTotalVisits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:layout_marginEnd="25dp"
+                    android:textColor="#4f4f4f"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Total Vist"
+                    />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPharmacies"
+            android:layout_width="match_parent"
+
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="12dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="65dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:background="@color/green"
+                    android:layout_height="match_parent" />
+
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:padding="12dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/vector_drawable_circle_gray"
+                    android:src="@drawable/ic_medicine"
+                    android:layout_height="38dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="9dp"
+                    android:textColor="#4f4f4f"
+                    android:text="@string/clinics"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            android:layout_weight="1"    />
+
+                <TextView
+                    android:id="@+id/ClinicsPharmacies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:layout_marginEnd="25dp"
+                    android:textColor="#4f4f4f"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Total Pharmacies 10"
+                    />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardVideoCall"
+            android:layout_width="match_parent"
+
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="12dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="65dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:background="@color/foshia"
+                    android:layout_height="match_parent" />
+
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:padding="12dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/vector_drawable_circle_gray"
+                    android:src="@drawable/ic_phone"
+                    android:layout_height="38dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="9dp"
+                    android:textColor="#4f4f4f"
+                    android:text="@string/video_call"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            android:layout_weight="1"    />
+
+                <TextView
+                    android:id="@+id/VideoCallTotalVisits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:layout_marginEnd="25dp"
+                    android:textColor="#4f4f4f"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Total Video Call 20"
+                    />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1277d1</color>
+    <color name="colorPrimaryDark">#1277d1</color>
+
+
+    <color name="grayBottom">#c5c4c4</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="tintGray">#8d8d93</color>
+    <color name="disActive">#DADADA</color>
+    <color name="yellow">#FECF09</color>
+    <color name="green">#1cd815</color>
+    <color name="foshia">#a657ff</color>
+    <color name="dark_blue">#1277d1</color>
+
+    <color name="red">#ff3135</color>
+    <color name="white">#ffffff</color>
+
+    <color name="text">#8d8b8b</color>
+
+
+    <color name="hint">#99000000</color>
+    <color name="textgray">#999999</color>
+
+    <color name="backgroundColor">#f6f6f8</color>
+</resources>

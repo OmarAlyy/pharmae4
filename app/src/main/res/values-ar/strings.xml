@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pharma E4</string>
+    <string name="welcome_back">مرحبآ بعودتك</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="forget_password">نسيت كلمة المرور؟</string>
+    <string name="welcome">مرحبآ بك،</string>
+    <string name="have_a_nice_day_at_work">نتمني لك يوم عمل رائع</string>
+    <string name="home">الرئيسية</string>
+    <string name="Client">العملاء</string>
+    <string name="Blog">المدونة</string>
+    <string name="More">˙لمزيد</string>
+    <string name="clinics">Clinics</string>
+    <string name="video_call">Video Call</string>
+
+</resources>

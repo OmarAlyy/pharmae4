@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pharma E4</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password ?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome">Welcome,</string>
+    <string name="have_a_nice_day_at_work">Have a nice day at work</string>
+    <string name="home">Home</string>
+    <string name="Client">Clients</string>
+    <string name="Blog">Blog</string>
+    <string name="More">More</string>
+    <string name="clinics">Clinics</string>
+    <string name="video_call">Video Call</string>
+
+
+</resources>
