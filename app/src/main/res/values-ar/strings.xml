@@ -12,7 +12,14 @@
     <string name="Client">العملاء</string>
     <string name="Blog">المدونة</string>
     <string name="More">˙لمزيد</string>
-    <string name="clinics">Clinics</string>
-    <string name="video_call">Video Call</string>
+    <string name="clinics">العيادات</string>
+    <string name="video_call">مكالمات الفيديو</string>
+    <string name="schedule">الجدول</string>
+    <string name="cancel">إلغاء</string>
+    <string name="Feedback">الرأي الشخصي</string>
+    <string name="start_video">ابدأ الفيديو</string>
+    <string name="plan_status">Plan Status</string>
+    <string name="search">Search</string>
+    <string name="reset">Reset</string>
 
 </resources>

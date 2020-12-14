@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Activities.LoginActivity"></activity>
+        <activity android:name=".View.Activities.VideoCallScheduleActivity"></activity>
+        <activity android:name=".View.Activities.ScheduleActivity"></activity>
+        <activity android:name=".View.Activities.LoginActivity" />
         <activity android:name=".View.Activities.MainActivity" />
         <activity android:name=".View.Activities.SplashActivity">
             <intent-filter>

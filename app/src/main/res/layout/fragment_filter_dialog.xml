@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp"
+    android:minWidth="300dp"
+
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".View.Fragments.FilterDialogFragment">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="25dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/ic_close"
+            android:rotation="180"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="end|center"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="#1277d1"
+            android:lineSpacingExtra="6sp"
+            android:gravity="center_horizontal"
+            android:text="@string/plan_status" />
+
+
+
+    </FrameLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="start|center"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/RadioAll"
+            android:text="All"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/RadioNewOrAwaiting"
+            android:text="New / Awaiting Response"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/RadioConfirm"
+            android:text="Confirm"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Search"
+            android:backgroundTint="#1277d1"
+            android:layout_width="wrap_content"
+            app:cornerRadius="5dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginEnd="10dp"
+            android:text="@string/search"
+            android:textSize="15sp"
+            android:insetBottom="0dp"
+            app:iconSize="14dp"
+
+            android:insetTop="0dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textColor="@color/colorWhite"
+            android:layout_height="wrap_content" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Reset"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:theme="@style/Theme.MaterialComponents"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"
+            app:cornerRadius="5dp"
+            android:textSize="15sp"
+android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/reset"
+            android:background="@android:color/transparent"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1dp" />
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>

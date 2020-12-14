@@ -1,15 +1,12 @@
-package com.ekadsoft.pharmae4.View.Fragments
+package com.ekadsoft.pharmae4.View.Activities
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.ekadsoft.pharmae4.HomeFragmentViewModel
+import com.ekadsoft.pharmae4.ScheduleViewModel
 import com.ekadsoft.pharmae4.R
-import com.ekadsoft.pharmae4.databinding.FragmentHomeBinding
+import com.ekadsoft.pharmae4.databinding.ActivityClinicsScheduleBinding
 import com.michalsvec.singlerowcalendar.calendar.CalendarChangesObserver
 import com.michalsvec.singlerowcalendar.calendar.CalendarViewManager
 import com.michalsvec.singlerowcalendar.calendar.SingleRowCalendarAdapter
@@ -18,42 +15,39 @@ import com.michalsvec.singlerowcalendar.utils.DateUtils
 import kotlinx.android.synthetic.main.calendar_item.view.*
 import java.util.*
 
+class ScheduleActivity : AppCompatActivity() {
 
-class HomeFragment : Fragment() {
+    var binding: ActivityClinicsScheduleBinding? = null
 
+    var viewmodel: ScheduleViewModel? = null
+    var type = 0
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_clinics_schedule)
+        viewmodel = ViewModelProviders.of(this).get(ScheduleViewModel::class.java)
 
-    private val calendar = Calendar.getInstance()
-    private var currentMonth = 0
-
-
-
-
-    lateinit var binding: FragmentHomeBinding
-
-    var viewmodel: HomeFragmentViewModel? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-
-        // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-
-
-        viewmodel = ViewModelProviders.of(this).get(HomeFragmentViewModel::class.java)
-        viewmodel!!.fragment = this
+        var bundle = intent.getBundleExtra("data")
+        type = bundle.getInt("type")
+        viewmodel!!.activity = this
+        viewmodel!!.type.set(type)
         binding?.viewmodel = viewmodel
+        viewmodel!!.getData()
+
+        binding!!.back.setOnClickListener {
+            finish()
+
+        }
+
+
 
         initSingleRowCalendar()
 
-        return binding.root
     }
-
 
     fun initSingleRowCalendar() {
 
+        val calendar = Calendar.getInstance()
+        var currentMonth = 0
         calendar.time = Date()
         currentMonth = calendar[Calendar.MONTH]
 
@@ -101,7 +95,7 @@ class HomeFragment : Fragment() {
             CalendarChangesObserver {
             // you can override more methods, in this example we need only this one
             override fun whenSelectionChanged(isSelected: Boolean, position: Int, date: Date) {
-                binding.tvDate.text =
+                binding!!.tvDate.text =
                     "${DateUtils.getMonthName(date)} ${DateUtils.getYear(date)}  "
                 super.whenSelectionChanged(isSelected, position, date)
             }
@@ -124,7 +118,7 @@ class HomeFragment : Fragment() {
         }
 
 
-        val singleRowCalendar = binding.mainSingleRowCalendar.apply {
+        val singleRowCalendar = binding!!.mainSingleRowCalendar.apply {
             calendarViewManager = myCalendarViewManager
             calendarChangesObserver = myCalendarChangesObserver
             calendarSelectionManager = mySelectionManager
@@ -141,4 +135,3 @@ class HomeFragment : Fragment() {
 
 
 }
-
