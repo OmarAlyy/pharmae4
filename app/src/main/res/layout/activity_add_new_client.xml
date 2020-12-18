@@ -1,9 +1,613 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".View.Activities.AddNewClientActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.ekadsoft.pharmae4.Utilities.GlobalVariables" />
+
+        <variable
+            name="viewmodel"
+            type="com.ekadsoft.pharmae4.AddClientViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@color/white">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="26dp"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/ic_back"
+            android:rotation="180"
+            android:onClick="@{()->viewmodel.back()}"
+
+            android:layout_gravity="start|center"
+            android:layout_height="26dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="#1277d1"
+            android:lineSpacingExtra="6sp"
+            android:gravity="center_horizontal"
+            android:text="@string/schedule" />
+
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="12dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_b"
+                android:textStyle="normal"
+                android:textSize="15sp"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="5sp"
+                android:text="@string/client"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+
+                    android:textSize="12sp"
+                    android:textColor="#1277d1"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/client_type"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:textColor="#1277d1"
+                    android:lineSpacingExtra="4sp"
+                    android:text="*"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lineClient_type"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:onClick="@{()->viewmodel.openClientType()}"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_rounded_gray_small_stroke"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textClient_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:text="@{viewmodel.clientTypeObservableField}"
+                    android:textColor="#8d8b8b"
+                    android:lineSpacingExtra="4sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+             android:layout_weight="1"   />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:rotation="90"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_arrow_right_24dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:textColor="#1277d1"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/entity_client"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:textColor="#1277d1"
+                    android:lineSpacingExtra="4sp"
+                    android:text="*"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linEntity_client"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="@{()->viewmodel.openEntityClient()}"
+
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_rounded_gray_small_stroke"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textEntity_client"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:textColor="#8d8b8b"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/entity_client"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+             android:layout_weight="1"   />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:rotation="90"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_arrow_right_24dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_b"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#1277d1"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/choose_client"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/linChoose_client"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:onClick="@{()->viewmodel.openChooseClient()}"
+
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_rounded_gray_small_stroke"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textChoose_client"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:textColor="#8d8b8b"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/choose_client"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+             android:layout_weight="1"   />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:rotation="90"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_arrow_right_24dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="#FAF5F5"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="12dp"
+                app:cardElevation="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent">
+
+
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image"
+                        android:layout_gravity="top"
+                        android:src="@drawable/vector_drawable_circle"
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:layout_height="wrap_content">
+
+
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="5sp"
+                            android:text="Doctor Ahmed Karim"
+                            />
+
+                        <TextView
+                            android:id="@+id/typeAndAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:layout_marginTop="3dp"
+                            android:textColor="#6b6b6b"
+                            android:lineSpacingExtra="4sp"
+android:text="Female , 30 Years"                            />
+
+
+
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_marginTop="3dp"
+                            android:textSize="11sp"
+                            android:textColor="#6b6b6b"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Ahmed Karim@gmail.com"
+                            />
+
+                        <TextView
+                            android:id="@+id/phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="11sp"
+                            android:textColor="#6b6b6b"
+                            android:lineSpacingExtra="4sp"
+                            android:text="002-100 300 5689"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="start"
+                            android:paddingEnd="10dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content">
+
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/logo"
+                                android:layout_gravity="center"
+                                android:src="@drawable/vector_drawable_circle"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" />
+
+
+
+                            <TextView
+                                android:id="@+id/nameOfPlace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="4sp"
+                                android:text="El-Shouroq (Nasr City)"
+                                />
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="12dp"
+            app:cardElevation="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_b"
+                android:textStyle="normal"
+                android:textSize="15sp"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="5sp"
+                android:text="@string/client_address_branches_addresses"
+                />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui_b"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#1277d1"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/branche_name"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/linBranche_name"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_rounded_gray_small_stroke"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/textBranche_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:textColor="#8d8b8b"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/choose_client"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"   />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:rotation="90"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_arrow_right_24dp"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+
+            <include layout="@layout/item_branche_show"
+             />
+
+            <include layout="@layout/item_branche_show"
+             />
+
+        </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save"
+                android:backgroundTint="#1277d1"
+                android:layout_width="140dp"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="20dp"
+                android:text="@string/save"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetBottom="0dp"
+                android:onClick="@{()->viewmodel.save()}"
+                android:insetTop="0dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="@color/colorWhite"
+                android:layout_height="50dp" />
+
+
+
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</layout>

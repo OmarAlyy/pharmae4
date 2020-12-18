@@ -37,7 +37,7 @@ class SplashActivity : AppCompatActivity() {
             ConfigurationFile.setCurrentLanguage(this, "en")
             if (!LoginSession.isLoggedIn(this@SplashActivity)) IntentClass.goToActivityAndClear(
                 this@SplashActivity,
-                AddFeedbackActivity::class.java, null
+                MainActivity::class.java, null
             ) else {
                 IntentClass.goToActivityAndClear(
                     this@SplashActivity,

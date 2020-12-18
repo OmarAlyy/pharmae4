@@ -41,6 +41,14 @@
     <string name="attachment_files">Attachment files</string>
     <string name="upload_photo">Upload Photo</string>
     <string name="save">Save</string>
+    <string name="client">Client</string>
+    <string name="client_type">Client Type</string>
+    <string name="entity_client">Entity Client</string>
+    <string name="choose_client">Choose Client</string>
+    <string name="client_address_branches_addresses">Client Address (Branches Addresses)</string>
+    <string name="branche_name">Branche Name</string>
+    <string name="OK">Ok</string>
+    <string name="required_please_check">Please choose first</string>
 
 
 </resources>

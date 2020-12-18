@@ -20,7 +20,6 @@ class FilterDialogFragment : DialogFragment() {
         var view = inflater.inflate(R.layout.fragment_filter_dialog, container, false)
         getDialog()!!.getWindow()!!.requestFeature(Window.FEATURE_NO_TITLE);
 
-
         view.close.setOnClickListener { dismiss() }
         view.Search.setOnClickListener { dismiss() }
         view.Reset.setOnClickListener { dismiss() }
