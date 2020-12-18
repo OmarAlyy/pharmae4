@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true">
+
+    <TextView
+        android:id="@+id/textViewCamera"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+
+        android:padding="10dp"
+        android:text="الكاميرا"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewGallery"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="15dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textViewCamera"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="معرض الصور"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewCancel"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="15dp"
+        android:visibility="gone"
+        android:textColor="@color/colorWhite"
+        android:background="@color/text"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textViewGallery"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="إلغاء"
+        tools:ignore="HardcodedText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"
+        android:visibility="gone" />
+</RelativeLayout>

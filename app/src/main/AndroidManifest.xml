@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ekadsoft.pharmae4">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Activities.VideoCallScheduleActivity"></activity>
-        <activity android:name=".View.Activities.ScheduleActivity"></activity>
+        <activity android:name=".View.Activities.AddNewClientActivity"></activity>
+        <activity android:name=".View.Activities.AddFeedbackActivity" />
+        <activity android:name=".View.Activities.ReportsActivity" />
+        <activity android:name=".View.Activities.ScheduleDetailsActivity" />
+        <activity android:name=".View.Activities.VideoCallScheduleActivity" />
+        <activity android:name=".View.Activities.ScheduleActivity" />
         <activity android:name=".View.Activities.LoginActivity" />
         <activity android:name=".View.Activities.MainActivity" />
         <activity android:name=".View.Activities.SplashActivity">
@@ -20,6 +29,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Images.ImageSelectActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+        <provider
+            android:name=".Images.provider.ImageSelectionProvider"
+            android:authorities="${applicationId}.image-selection-provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>

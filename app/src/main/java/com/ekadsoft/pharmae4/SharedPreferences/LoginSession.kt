@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import com.ekadsoft.pharmae4.Model.UserDataModel
-import com.ekadsoft.pharmae4.Utilities.GlobalVariables
 import com.ekadsoft.pharmae4.View.Activities.SplashActivity
 import com.google.gson.Gson
 
@@ -71,13 +70,6 @@ object LoginSession {
         editor.apply()
     }
 
-    fun getUserType(activity: Context): Int {
-        initLoginSharedPreference(activity)
-        return loginFile!!.getInt(
-            USER_TYPE_KEY,
-            GlobalVariables.DEFAULT_USER_TYPE
-        )
-    }
 
     fun getUserData(activity: Context): UserDataModel {
         initLoginSharedPreference(activity)

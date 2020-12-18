@@ -1,8 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".View.Fragments.ClientsFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</FrameLayout>
+
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewmodel"
+            type="com.ekadsoft.pharmae4.ClientsViewModel" />
+    </data>
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.Fragments.ClientsFragment">
+
+        <LinearLayout
+            android:id="@+id/lineNoData"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="@{viewmodel.isNoData?View.VISIBLE:View.GONE}"
+
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:src="@drawable/ic_clients"
+                android:layout_height="90dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="17sp"
+                android:layout_margin="20dp"
+                android:textColor="#c5c4c4"
+                android:lineSpacingExtra="5sp"
+                android:gravity="center_horizontal"
+                android:text="@string/you_have_no_clintes"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add"
+                android:backgroundTint="#1277d1"
+                android:layout_width="140dp"
+                android:onClick="@{()->viewmodel.addClient()}"
+                app:cornerRadius="10dp"
+                android:text="@string/Add"
+                android:textSize="15dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="@color/colorWhite"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_weight="1"
+                    app:cardElevation="6dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="40dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:tint="@color/colorPrimary"
+                            android:src="@drawable/vector_drawable_search"
+                            android:layout_height="24dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:alpha="0.5"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Search by Name or Mobile" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                      app:cardElevation="6dp"
+                    android:layout_height="40dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:src="@drawable/ic_filter"
+                            android:layout_height="18dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Filter" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_clients"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+            android:onClick="@{()->viewmodel.addClient()}"
+
+            android:layout_gravity="bottom|end"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</layout>

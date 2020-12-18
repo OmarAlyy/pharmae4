@@ -21,5 +21,23 @@
     <string name="plan_status">Plan Status</string>
     <string name="search">Search</string>
     <string name="reset">Reset</string>
+    <string name="your_appointment">Your Appointment</string>
+    <string name="view">View</string>
+    <string name="Pharmacies">Pharmacies</string>
+    <string name="you_have_no_clintes">You have no Clintes</string>
+    <string name="Add">Add</string>
+    <string name="new_plan">New Plan</string>
+    <string name="my_profile">My Profile</string>
+    <string name="Reports">Reports</string>
+    <string name="schedule_history">Schedule History</string>
+    <string name="ChangePassword">Change Password</string>
+    <string name="help_support"><![CDATA[Help & Support]]></string>
+    <string name="Language">Language</string>
+    <string name="LogOut">Log Out</string>
+    <string name="write_feedback">Write Feedback</string>
+    <string name="survey_form">Survey Form</string>
+    <string name="attachment_files">Attachment files</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="save">Save</string>
 
 </resources>

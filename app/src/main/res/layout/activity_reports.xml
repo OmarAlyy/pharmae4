@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent"
+        tools:context=".View.Activities.ReportsActivity">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="26dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_back"
+                android:rotation="180"
+                android:layout_gravity="start|center"
+                android:layout_height="26dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                android:text="@string/Reports" />
+
+
+        </FrameLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+             app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+             android:id="@+id/card"
+             app:cardElevation="6dp"
+    android:layout_margin="20dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textStyle="normal"
+                    android:textSize="20sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#1277d1"
+                    android:lineSpacingExtra="7sp"
+                    android:gravity="center_horizontal"
+                    android:text="Plans Statistics"
+                    />
+
+
+
+                <LinearLayout
+                    android:id="@+id/lineYears"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:layout_margin="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui_b"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:textColor="#1277d1"
+                        android:lineSpacingExtra="5sp"
+                        android:text="2020"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:tint="@color/colorPrimary"
+                        android:rotation="270"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_arrow_left_24dp"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="center"
+                     android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="top"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listNumbers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="vertical"
+                            tools:itemCount="7"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_chart_number" />
+
+                    </LinearLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_gravity="bottom"
+                         android:layout_height="350dp"
+                        android:layout_weight="1">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listMonths"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_chart_month" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:src="@drawable/circle_background_cart"
+                        android:tint="#0074d4"
+                        android:layout_height="10dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui_b"
+                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+
+                        android:textColor="#6b6b6b"
+                        android:lineSpacingExtra="5sp"
+                        android:text="Done Plans"
+                        />
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content" />
+
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:src="@drawable/circle_background_cart"
+                        android:tint="#b5d4f1"
+                        android:layout_height="10dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui_b"
+                        android:textStyle="normal"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#6b6b6b"
+                        android:lineSpacingExtra="5sp"
+                        android:text="Target Plans"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+</layout>

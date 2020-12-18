@@ -1,6 +1,7 @@
 package com.ekadsoft.pharmae4.View.Adapters
 
 import android.app.Activity
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,8 +9,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ekadsoft.pharmae4.Model.ClinicsModel
 import com.ekadsoft.pharmae4.R
+import com.ekadsoft.pharmae4.Utilities.IntentClass
+import com.ekadsoft.pharmae4.View.Activities.AddFeedbackActivity
+import com.ekadsoft.pharmae4.View.Activities.ScheduleDetailsActivity
 import com.ekadsoft.pharmae4.View.Adapters.ScheduleAdapter.MyViewHolder
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 
@@ -42,6 +47,28 @@ class ScheduleAdapter(
         else
             holder.viewColor!!.setBackgroundColor(activity.getColor(R.color.foshia))
 
+        holder.card.setOnClickListener {
+
+            val bundle = Bundle()
+            bundle.putInt("type", type)
+            IntentClass.goToActivity(
+                activity,
+                ScheduleDetailsActivity::class.java,
+                bundle
+            )
+
+        }
+        holder.Feedback.setOnClickListener {
+
+            val bundle = Bundle()
+            bundle.putInt("type", type)
+            IntentClass.goToActivity(
+                activity,
+                AddFeedbackActivity::class.java,
+                bundle
+            )
+
+        }
 
     }
 
@@ -57,8 +84,9 @@ class ScheduleAdapter(
         var time: TextView? = null
         var viewColor: TextView? = null
         var address: TextView? = null
-        var Feedback: MaterialButton? = null
+        lateinit var Feedback: MaterialButton
         var cancel: MaterialButton? = null
+        lateinit var card: MaterialCardView
         fun initView(itemView: View) {
             image = itemView.findViewById(R.id.image)
             name = itemView.findViewById(R.id.name)
@@ -68,6 +96,7 @@ class ScheduleAdapter(
             address = itemView.findViewById(R.id.address)
             Feedback = itemView.findViewById(R.id.Feedback)
             cancel = itemView.findViewById(R.id.cancel)
+            card = itemView.findViewById(R.id.card)
         }
 
         init {

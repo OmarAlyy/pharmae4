@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="12dp"
+    android:id="@+id/card"
+    android:clickable="true"
+    app:cardElevation="6dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="12dp"
+        android:layout_margin="10dp"
+        android:layout_height="match_parent">
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_gravity="top"
+            android:src="@drawable/vector_drawable_circle"
+            android:layout_width="40dp"
+
+            android:layout_height="40dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+                    android:textColor="#4f4f4f"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Doctor Ahmed Karim"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="26dp"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_height="26dp" />
+                <ImageView
+                    android:id="@+id/delete"
+                    android:layout_width="26dp"
+                    android:padding="1dp"
+                    android:layout_marginStart="18dp"
+                    android:src="@drawable/ic_delet"
+                    android:layout_height="26dp" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
+                android:layout_marginTop="5dp"
+                 android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iconType"
+                    android:layout_width="12dp"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_hospital"
+                    android:layout_height="12dp" />
+
+                <TextView
+                    android:id="@+id/textType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#1277d1"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Clinic"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:layout_marginTop="3dp"
+                android:textSize="11sp"
+                android:textColor="#6b6b6b"
+                android:lineSpacingExtra="4sp"
+                android:text="Ahmed Karim@gmail.com"
+                />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="11sp"
+                android:layout_marginTop="3dp"
+                android:textColor="#6b6b6b"
+                android:lineSpacingExtra="4sp"
+                android:text="002-100 300 5689"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Feedback"
+                android:backgroundTint="#1277d1"
+                android:layout_width="wrap_content"
+                app:cornerRadius="5dp"
+                android:text="@string/new_plan"
+                android:textSize="10sp"
+                android:insetBottom="0dp"
+                android:layout_gravity="end"
+
+                app:iconSize="14dp"
+                android:insetTop="0dp"
+                app:icon="@drawable/ic_baseline_add_24"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="@color/colorWhite"
+                android:layout_height="35dp" />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

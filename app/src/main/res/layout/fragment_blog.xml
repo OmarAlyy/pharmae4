@@ -5,10 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".View.Fragments.BlogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="30dp"
+        android:textSize="30dp"
+        android:fontFamily="@font/segoeui_b"
+        android:textColor="@color/colorPrimary"
+        android:text="In Next Version"
  />
 
 </FrameLayout>

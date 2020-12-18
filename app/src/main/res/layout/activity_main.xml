@@ -73,15 +73,15 @@
             android:layout_width="match_parent"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
-
             app:cardPreventCornerOverlap="true"
-            android:layout_height="55dp">
+            android:layout_height="60dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:paddingTop="5dp"
                 android:layout_margin="5dp"
                 android:layout_height="match_parent">
 
@@ -166,8 +166,8 @@ android:onClick="@{()->viewmodel.showFragment(1)}"
 
                     <ImageView
                         android:id="@+id/iconBlog"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_blog"
                         android:tint="@{viewmodel.itemSelector==3 ? @color/colorPrimary : @color/grayBottom}"

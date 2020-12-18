@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="elvm"
+            type="com.ekadsoft.pharmae4.EditLanguageViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:minWidth="300dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:paddingEnd="25dp"
+            android:paddingStart="25dp"
+            android:layout_gravity="start"
+            android:paddingTop="25dp"
+            android:text="@string/Language"
+            android:textColor="#de000000"
+          />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:onClick='@{()->elvm.selectLang("ar")}'
+            android:orientation="horizontal"
+            android:paddingBottom="13dp"
+            android:paddingStart="25dp"
+            android:paddingTop="13dp">
+
+            <TextView
+                android:id="@+id/arabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="عربي"
+                android:textColor="@{elvm.arabicTextColorObservable}"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
+                android:layout_marginEnd="21dp"
+android:visibility="gone"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="27dp"
+            android:onClick='@{()->elvm.selectLang("en")}'
+            android:orientation="horizontal"
+            android:paddingBottom="13dp"
+            android:paddingStart="25dp"
+            android:paddingTop="13dp">
+
+            <TextView
+                android:id="@+id/english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="English"
+                android:textColor="@{elvm.englishTextColorObservable}"
+                 />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
+                android:visibility="gone"
+                android:layout_marginEnd="21dp"
+                app:srcCompat="@drawable/ic_done_green" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
