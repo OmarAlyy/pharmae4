@@ -23,10 +23,7 @@ class AddNewClientActivity : AppCompatActivity() {
 
         viewmodel!!.activity = this
         binding?.viewmodel = viewmodel
-        binding!!.back.setOnClickListener {
-            finish()
 
-        }
 
     }
 }

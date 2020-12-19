@@ -17,9 +17,7 @@
     <string name="schedule">Schedule</string>
     <string name="cancel">Cancel</string>
     <string name="Feedback">Feedback</string>
-    <string name="start_video">Start Video</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="plan_status">Plan Status</string>
     <string name="search">Search</string>
     <string name="reset">Reset</string>
@@ -46,9 +44,27 @@
     <string name="entity_client">Entity Client</string>
     <string name="choose_client">Choose Client</string>
     <string name="client_address_branches_addresses">Client Address (Branches Addresses)</string>
-    <string name="branche_name">Branche Name</string>
     <string name="OK">Ok</string>
     <string name="required_please_check">Please choose first</string>
+    <string name="upload_profile">Upload Profile</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="new_branch">New Branch</string>
+    <string name="branche_name">Branche Name</string>
+    <string name="street_name">Street name</string>
+    <string name="building_number">Building number</string>
+    <string name="City">City</string>
+    <string name="area">Area</string>
+    <string name="floor">Floor</string>
+    <string name="landmark">Landmark</string>
+    <string name="location_map">Location Map</string>
+    <string name="your_location">Your Location</string>
+    <string name="branches">Branches</string>
+    <string name="reason_plan">Reason Plan</string>
+    <string name="feedback_summary">Feedback Summary</string>
 
 
 </resources>

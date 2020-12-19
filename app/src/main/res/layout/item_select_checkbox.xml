@@ -11,7 +11,6 @@
     <CheckBox
         android:id="@+id/checkbox"
         android:layout_width="wrap_content"
-        android:checked="true"
         android:buttonTint="@color/colorPrimary"
         android:src="@drawable/ic_location"
         android:layout_height="wrap_content" />
@@ -25,7 +24,7 @@
         android:textSize="12sp"
         android:textColor="@color/colorPrimary"
         android:lineSpacingExtra="4sp"
-        android:text="Select All"
+        android:text="Test Title"
         />
 
 </LinearLayout>

@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.ekadsoft.pharmae4.Utilities.GlobalVariables" />
+
+        <variable
+            name="viewmodel"
+            type="com.ekadsoft.pharmae4.AddNewBlanViewModel" />
+    </data>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="26dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_back"
+                android:rotation="180"
+                android:onClick="@{()->viewmodel.back()}"
+
+                android:layout_gravity="start|center"
+                android:layout_height="26dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                android:text="@string/new_plan" />
+
+
+        </FrameLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/image"
+                            android:layout_gravity="top"
+                            android:src="@drawable/vector_drawable_circle"
+                            android:layout_width="40dp"
+
+                            android:layout_height="40dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="10dp"
+                            android:layout_height="wrap_content">
+
+
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="15sp"
+                                android:textColor="#4f4f4f"
+                                android:lineSpacingExtra="5sp"
+                                android:text="Doctor Ahmed Karim"
+                                />
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="start|center"
+                                android:gravity="start|center"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/iconType"
+                                    android:layout_width="12dp"
+                                    android:tint="@color/colorPrimary"
+                                    android:src="@drawable/ic_hospital"
+                                    android:layout_height="12dp" />
+
+                                <TextView
+                                    android:id="@+id/textType"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:textSize="12sp"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="#1277d1"
+                                    android:lineSpacingExtra="5sp"
+                                    android:text="Clinic"
+                                    />
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+
+                            <TextView
+                                android:id="@+id/email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_marginTop="3dp"
+                                android:textSize="11sp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Ahmed Karim@gmail.com"
+                                />
+
+                            <TextView
+                                android:id="@+id/phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="11sp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="002-100 300 5689"
+                                />
+
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:padding="12dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textStyle="normal"
+                            android:textSize="15sp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="5sp"
+                            android:text="Set New Plan"
+                            />
+
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/RadioClinics"
+                                android:layout_width="wrap_content"
+                                android:paddingStart="5dp"
+                                android:textSize="12dp"
+                                android:text="@string/clinics"
+                                android:layout_height="wrap_content" />
+
+
+                            <RadioButton
+                                android:id="@+id/RadioVideoCall"
+                                android:layout_width="wrap_content"
+                                android:paddingStart="5dp"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12dp"
+                                android:text="@string/video_call"
+                                android:layout_height="wrap_content" />
+
+
+
+                        </RadioGroup>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:textColor="#1277d1"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="16dp"
+                            android:lineSpacingExtra="4sp"
+                            android:text="@string/branches"
+                            />
+
+
+                        <LinearLayout
+                            android:id="@+id/linBranche_name"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingEnd="12dp"
+                            android:paddingStart="12dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:onClick="@{()->viewmodel.openBranche()}"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/shape_rounded_gray_small_stroke"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:id="@+id/textBranche_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui_b"
+                                android:textStyle="normal"
+                                android:textSize="10sp"
+                                android:textColor="#8d8b8b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="@string/branches"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"   />
+
+
+                            <ImageView
+                                android:id="@+id/iconArrowShowAddress"
+                                android:layout_width="20dp"
+                                android:rotation="90"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/ic_arrow_right_24dp"
+                                android:layout_height="20dp" />
+                        </LinearLayout>
+
+
+                        <include layout="@layout/item_branche_show"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="24dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+
+
+
+
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:layout_margin="16dp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="4sp"
+                            android:text="August 2020"
+                            />
+
+
+
+                        <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
+                            android:id="@+id/main_single_row_calendar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            app:deselection="false"
+                            app:longPress="false"
+                            app:multiSelection="false" />
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="12dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    tools:itemCount="10"
+
+                    app:spanCount="4"
+                    android:layout_gravity="center"
+
+                    tools:listitem="@layout/item_time"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="24dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:padding="12dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textStyle="normal"
+                            android:textSize="15sp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="5sp"
+                            android:text="@string/reason_plan"
+                            />
+
+
+
+
+                        <EditText
+                            android:id="@+id/reason_plan"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:textDirection="ltr"
+                            android:layout_marginTop="6dp"
+                            android:textSize="12sp"
+                            android:paddingTop="10dp"
+                            android:gravity="top|start"
+                            android:hint="@string/landmark"
+                            android:inputType="text"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/shape_rounded_gray_stroke"
+                            android:layout_height="70dp" />
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save"
+                    android:backgroundTint="#1277d1"
+                    android:layout_width="140dp"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/save"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:insetBottom="0dp"
+                    android:onClick="@{()->viewmodel.save()}"
+                    android:insetTop="0dp"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="50dp" />
+
+
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </LinearLayout>
+
+
+</layout>

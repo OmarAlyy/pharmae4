@@ -10,6 +10,7 @@ import com.ekadsoft.pharmae4.R
 import com.ekadsoft.pharmae4.SharedPreferences.LoginSession
 import com.ekadsoft.pharmae4.Utilities.IntentClass
 import com.ekadsoft.pharmae4.View.Activities.ReportsActivity
+import com.ekadsoft.pharmae4.View.Activities.ScheduleHistoryActivity
 import com.ekadsoft.pharmae4.databinding.FragmentMoreBinding
 
 
@@ -40,6 +41,9 @@ class MoreFragment : Fragment() {
 
         binding.cardReports.setOnClickListener {
             activity?.let { it1 -> IntentClass.goToActivity(it1 , ReportsActivity::class.java , null) }
+        }
+        binding.cardScheduleHistory.setOnClickListener {
+            activity?.let { it1 -> IntentClass.goToActivity(it1 , ScheduleHistoryActivity::class.java , null) }
         }
     }
 

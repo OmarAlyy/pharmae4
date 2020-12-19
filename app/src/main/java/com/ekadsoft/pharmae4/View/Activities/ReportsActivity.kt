@@ -21,10 +21,8 @@ class ReportsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_reports)
 
-
         val min = 400
         val max = 600
-
 
         val list: MutableList<ReportsTargetsAndDonePlansModel> =
             ArrayList<ReportsTargetsAndDonePlansModel>()
@@ -42,8 +40,6 @@ class ReportsActivity : AppCompatActivity() {
         }
         numbers.add("0")
 
-
-
         for (i in 0..months.size - 1) {
             list.add(
                 ReportsTargetsAndDonePlansModel(
@@ -55,8 +51,9 @@ class ReportsActivity : AppCompatActivity() {
 
         }
 
-        binding!!.listMonths.adapter = ReportsMonthAdapter(this, list, max)
-        binding!!.listNumbers.adapter = ReportsNumbersAdapter(this, numbers)
+        binding.listMonths.adapter = ReportsMonthAdapter(this, list, max)
+        binding.listNumbers.adapter = ReportsNumbersAdapter(this, numbers)
+        binding.back.setOnClickListener { finish() }
 
     }
 

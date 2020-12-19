@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.ekadsoft.pharmae4.R
-import com.ekadsoft.pharmae4.ScheduleViewModel
-import com.ekadsoft.pharmae4.databinding.ActivityClinicsScheduleBinding
+import com.ekadsoft.pharmae4.ScheduleHistoryViewModel
+import com.ekadsoft.pharmae4.databinding.ActivityScheduleHistoryBinding
 import com.michalsvec.singlerowcalendar.calendar.CalendarChangesObserver
 import com.michalsvec.singlerowcalendar.calendar.CalendarViewManager
 import com.michalsvec.singlerowcalendar.calendar.SingleRowCalendarAdapter
@@ -15,22 +15,20 @@ import com.michalsvec.singlerowcalendar.utils.DateUtils
 import kotlinx.android.synthetic.main.calendar_item.view.*
 import java.util.*
 
-class ScheduleActivity : AppCompatActivity() {
+class ScheduleHistoryActivity : AppCompatActivity() {
 
-   lateinit var binding: ActivityClinicsScheduleBinding
 
-    lateinit var viewmodel: ScheduleViewModel
-    var type = 0
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+    lateinit var binding: ActivityScheduleHistoryBinding
+
+    lateinit var viewmodel: ScheduleHistoryViewModel
+     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_clinics_schedule)
-        viewmodel = ViewModelProviders.of(this).get(ScheduleViewModel::class.java)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_schedule_history)
+        viewmodel = ViewModelProviders.of(this).get(ScheduleHistoryViewModel::class.java)
 
-        var bundle = intent.getBundleExtra("data")
-        type = bundle.getInt("type")
-        viewmodel.activity = this
-        viewmodel.type.set(type)
-        binding.viewmodel = viewmodel
+         viewmodel.activity = this
+         binding.viewmodel = viewmodel
         viewmodel.getData()
 
         binding.back.setOnClickListener {
@@ -130,6 +128,7 @@ class ScheduleActivity : AppCompatActivity() {
 
 
     }
+
 
 
 }

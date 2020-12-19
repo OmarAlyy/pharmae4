@@ -18,46 +18,5 @@
         <item name="android:minWidth">200dp</item>
     </style>
 
-    <style name="MediumText" parent="android:TextAppearance">
-        <!-- Customize your theme here. -->
-        <item name="android:textSize">17sp</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-
-    <style name="EditTextStyle">
-        <!-- Customize your theme here. -->
-        <item name="android:textSize">16sp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:gravity">start|center</item>
-        <item name="android:paddingStart">10dp</item>
-        <item name="android:paddingEnd">10dp</item>
-        <item name="android:textColor">@color/hint</item>
-        <item name="android:textColorHint">@color/hint</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:layout_marginStart">30dp</item>
-        <item name="android:layout_marginEnd">30dp</item>
-    </style>
-
-
-    <style name="ThemeWhite" parent="AppTheme">
-        <item name="colorAccent">@color/white</item>
-        <item name="colorPrimaryDark">@color/white</item>
-        <item name="colorPrimary">@color/white</item>
-    </style>
-
-    <style name="ThemeNormal" parent="AppTheme">
-        <item name="colorAccent">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-    </style>
-    <style name="ThemeYellow" parent="AppTheme">
-        <item name="colorAccent">@color/yellow</item>
-        <item name="colorPrimaryDark">@color/yellow</item>
-        <item name="colorPrimary">@color/yellow</item>
-    </style>
-
 
 </resources>

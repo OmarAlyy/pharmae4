@@ -4,23 +4,40 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
+import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.databinding.ObservableInt
 import androidx.lifecycle.ViewModel
 import com.ekadsoft.pharmae4.Images.imagePicker.Camera
+import com.ekadsoft.pharmae4.Utilities.GlobalVariables
+import com.ekadsoft.pharmae4.Utilities.IntentClass
+import com.ekadsoft.pharmae4.View.Activities.AddNewBranchActivity
 import com.ekadsoft.pharmae4.View.Activities.AddNewClientActivity
+import com.ekadsoft.pharmae4.View.Fragments.SelectCheckBoxFragmentDialog
 import com.ekadsoft.pharmae4.View.Fragments.SelectRadioFragmentDialog
 
 class AddClientViewModel : ViewModel() {
 
 
-    var clientTypeObservableField : ObservableField<String> = ObservableField("Client Type")
-    var clientTypeObservableFieldId : ObservableField<String> = ObservableField("")
+    var clientTypeObservableField: ObservableField<String> = ObservableField("Client Type")
+    var clientTypeObservableFieldId: ObservableField<String> = ObservableField("")
+
+
+    var clientEntityObservableField: ObservableField<String> = ObservableField("Client Type")
+    var clientEntityObservableFieldID: ObservableField<String> = ObservableField("Client Type")
+
+    var clientChooseObservableField: ObservableField<String> = ObservableField("Client Type")
+    var clientChooseObservableFieldId: ObservableField<String> = ObservableField("")
+
+
+
+    var isNoClients: ObservableBoolean = ObservableBoolean(false)
 
 
     lateinit var activity: AddNewClientActivity
     var type = ObservableInt()
 
+    var typeSelect = 0;
 
     init {
         type = ObservableInt(1)
@@ -33,6 +50,7 @@ class AddClientViewModel : ViewModel() {
 
     }
 
+
     fun save() {
 
         activity.finish()
@@ -42,9 +60,10 @@ class AddClientViewModel : ViewModel() {
 
     fun openClientType() {
 
-        SelectRadioFragmentDialog("Client Type" , ObservableField<String>(),
-            ObservableField<String>()
-        ).show(activity!!.supportFragmentManager,"")
+        typeSelect = 1
+        SelectRadioFragmentDialog(
+            "Client Type", this, typeSelect
+        ).show(activity!!.supportFragmentManager, "")
 
     }
 
@@ -52,10 +71,10 @@ class AddClientViewModel : ViewModel() {
     fun openEntityClient() {
 
 
-
-        SelectRadioFragmentDialog("Entity Client" , ObservableField<String>(),
-            ObservableField<String>()
-        ).show(activity!!.supportFragmentManager,"")
+        typeSelect = GlobalVariables.TYPE_EntityClient
+        SelectRadioFragmentDialog(
+            "Entity Client", this, typeSelect
+        ).show(activity!!.supportFragmentManager, "")
 
 
     }
@@ -63,10 +82,39 @@ class AddClientViewModel : ViewModel() {
     fun openChooseClient() {
 
 
-        SelectRadioFragmentDialog("Choose Client" , ObservableField<String>(),
-            ObservableField<String>()
-        ).show(activity!!.supportFragmentManager,"")
+        typeSelect = GlobalVariables.TYPE_Choose_Client
+        SelectRadioFragmentDialog(
+            "Choose Client", this, typeSelect
+        ).show(activity!!.supportFragmentManager, "")
 
+
+    }
+
+
+    fun openBranche() {
+
+
+        typeSelect = GlobalVariables.TYPE_BRANCH
+        SelectCheckBoxFragmentDialog(
+            "Branche Name", this, typeSelect
+        ).show(activity!!.supportFragmentManager, "")
+
+    }
+
+
+    fun addNewClient() {
+        isNoClients.set(!isNoClients.get())
+
+    }
+
+    fun addNewBranch() {
+
+
+        IntentClass.goToActivity(
+            activity,
+            AddNewBranchActivity::class.java,
+            null
+        )
 
     }
 
@@ -100,6 +148,5 @@ class AddClientViewModel : ViewModel() {
             Camera.showGallery(activity)
         }
     }
-
 
 }

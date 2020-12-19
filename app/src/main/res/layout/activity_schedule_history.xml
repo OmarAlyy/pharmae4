@@ -9,7 +9,7 @@
 
         <variable
             name="viewmodel"
-            type="com.ekadsoft.pharmae4.ScheduleViewModel" />
+            type="com.ekadsoft.pharmae4.ScheduleHistoryViewModel" />
     </data>
 
 
@@ -47,7 +47,7 @@
                 android:textColor="#1277d1"
                 android:lineSpacingExtra="6sp"
                 android:gravity="center_horizontal"
-                android:text="@string/schedule" />
+                android:text="@string/schedule_history" />
 
 
         </FrameLayout>
@@ -64,176 +64,6 @@
                 android:layout_height="wrap_content">
 
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardClinics"
-                    android:layout_width="match_parent"
-
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
-                    android:layout_marginTop="12dp"
-                    app:cardElevation="6dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_height="65dp">
-
-                    <LinearLayout
-                        android:visibility="@{viewmodel.type==1 ? View.VISIBLE : View.GONE}"
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="10dp"
-                            android:background="@color/colorPrimary"
-                            android:layout_height="match_parent" />
-
-
-                        <ImageView
-                            android:layout_width="38dp"
-                            android:padding="12dp"
-                            android:layout_marginStart="12dp"
-                            android:background="@drawable/vector_drawable_circle_gray"
-                            android:src="@drawable/ic_hospital"
-                            android:layout_height="38dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12sp"
-                            android:layout_marginStart="9dp"
-                            android:textColor="#4f4f4f"
-                            android:text="@string/clinics" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:id="@+id/ClinicsTotalVisits"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="normal"
-                            android:textSize="10sp"
-                            android:layout_marginEnd="25dp"
-                            android:textColor="#4f4f4f"
-                            android:lineSpacingExtra="4sp"
-                            android:text="Total Vist" />
-
-
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:visibility="@{viewmodel.type==2 ? View.VISIBLE : View.GONE , default=gone}"
-
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="10dp"
-                            android:background="@color/green"
-                            android:layout_height="match_parent" />
-
-
-                        <ImageView
-                            android:layout_width="38dp"
-                            android:padding="12dp"
-                            android:layout_marginStart="12dp"
-                            android:background="@drawable/vector_drawable_circle_gray"
-                            android:src="@drawable/ic_medicine"
-                            android:layout_height="38dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12sp"
-                            android:layout_marginStart="9dp"
-                            android:textColor="#4f4f4f"
-                            android:text="@string/clinics"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"    />
-
-                        <TextView
-                            android:id="@+id/ClinicsPharmacies"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="normal"
-                            android:textSize="10sp"
-                            android:layout_marginEnd="25dp"
-                            android:textColor="#4f4f4f"
-                            android:lineSpacingExtra="4sp"
-                            android:text="Total Pharmacies 10"
-                            />
-
-
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:visibility="@{viewmodel.type==3 ? View.VISIBLE : View.GONE , default=gone}"
-
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="10dp"
-                            android:background="@color/foshia"
-                            android:layout_height="match_parent" />
-
-
-                        <ImageView
-                            android:layout_width="38dp"
-                            android:padding="12dp"
-                            android:layout_marginStart="12dp"
-                            android:background="@drawable/vector_drawable_circle_gray"
-                            android:src="@drawable/ic_phone"
-                            android:layout_height="38dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12sp"
-                            android:layout_marginStart="9dp"
-                            android:textColor="#4f4f4f"
-                            android:text="@string/video_call"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"    />
-
-                        <TextView
-                            android:id="@+id/VideoCallTotalVisits"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="normal"
-                            android:textSize="10sp"
-                            android:layout_marginEnd="25dp"
-                            android:textColor="#4f4f4f"
-                            android:lineSpacingExtra="4sp"
-                            android:text="Total Video Call 20"
-                            />
-
-
-                    </LinearLayout>
-
-
-
-                </com.google.android.material.card.MaterialCardView>
 
 
                 <LinearLayout
@@ -293,9 +123,8 @@
                         app:cardCornerRadius="10dp"
                         android:layout_weight="1"
                         android:layout_margin="5dp"
-android:clickable="true"
+                        android:clickable="true"
                         android:onClick="@{()->viewmodel.openFilter()}"
-                        android:visibility="@{viewmodel.type==2 ? View.GONE : View.VISIBLE }"
                         app:cardElevation="6dp"
                         android:layout_height="40dp">
 
@@ -388,7 +217,6 @@ android:clickable="true"
                     android:orientation="vertical"
                     tools:itemCount="5"
                     android:layout_marginBottom="10dp"
-
                     tools:listitem="@layout/item_clinics"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 

@@ -5,32 +5,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ekadsoft.pharmae4.Model.ClientsModel
+import com.ekadsoft.pharmae4.Model.RadioTestModel
 import com.ekadsoft.pharmae4.R
-import com.ekadsoft.pharmae4.Utilities.IntentClass
-import com.ekadsoft.pharmae4.View.Activities.NewPlanActivity
-import kotlinx.android.synthetic.main.item_clients.view.*
 import java.util.*
 
-class ClientListAdapter(
+class SelectCheckBoxAdapter(
     var activity: Activity,
-    list: List<ClientsModel>
+    list: MutableList<RadioTestModel>
 ) :
-    RecyclerView.Adapter<ClientListAdapter.MyViewHolder>() {
+    RecyclerView.Adapter<SelectCheckBoxAdapter.MyViewHolder>() {
 
 
-    var list: List<ClientsModel> = ArrayList()
+    var list: MutableList<RadioTestModel> = ArrayList()
     override fun getItemViewType(position: Int): Int {
         return position
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_clients, parent, false)
+        val view = inflater.inflate(R.layout.item_select_checkbox, parent, false)
         return MyViewHolder(view)
-
 
     }
 
@@ -47,18 +42,11 @@ class ClientListAdapter(
         RecyclerView.ViewHolder(view!!) {
 
 
-        fun bind(model: ClientsModel) {
+        fun bind(model: RadioTestModel) {
             with(itemView) {
 
-                itemView.name.text = "omar aly"
-                itemView.NewPlan.setOnClickListener {
 
-                    IntentClass.goToActivity(
-                        activity,
-                        NewPlanActivity::class.java,
-                        null
-                    )
-                }
+
             }
         }
     }

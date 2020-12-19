@@ -11,20 +11,20 @@ import com.ekadsoft.pharmae4.Model.ClinicsModel
 import com.ekadsoft.pharmae4.R
 import com.ekadsoft.pharmae4.Utilities.IntentClass
 import com.ekadsoft.pharmae4.View.Activities.AddFeedbackActivity
+import com.ekadsoft.pharmae4.View.Activities.FeedbackSummaryActivity
 import com.ekadsoft.pharmae4.View.Activities.ScheduleDetailsActivity
-import com.ekadsoft.pharmae4.View.Adapters.ScheduleAdapter.MyViewHolder
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 
-class ScheduleAdapter(
+class ScheduleHistoryAdapter(
     var activity: Activity,
-    list: List<ClinicsModel>,
-    var type: Int
+    list: List<ClinicsModel>
 ) :
-    RecyclerView.Adapter<MyViewHolder>() {
+    RecyclerView.Adapter<ScheduleHistoryAdapter.MyViewHolder>() {
 
+    var type = 0
 
     var list: List<ClinicsModel> = ArrayList()
     override fun getItemViewType(position: Int): Int {
@@ -33,21 +33,44 @@ class ScheduleAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_clinics, parent, false)
+            .inflate(R.layout.item_schedule_history, parent, false)
         return MyViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val dataBean = list[position]
 
+        if (position < 3 && position != 0)
+            type = position
 
-        if (type == 1)
+        if (type == 1) {
+
+            holder.Feedback.visibility = View.VISIBLE
+            holder.status!!.setTextColor(activity.getColor(R.color.colorPrimary))
+
+            holder.FeedbackSummary.visibility = View.GONE
+            holder.status!!.text = "Finished"
             holder.viewColor!!.setBackgroundColor(activity.getColor(R.color.colorPrimary))
-        else if (type == 2)
+
+
+        } else if (type == 2) {
+
+            holder.status!!.text = "Cancelled"
+
+            holder.status!!.setTextColor(activity.getColor(R.color.red))
+
+            holder.Feedback.visibility = View.GONE
+            holder.FeedbackSummary.visibility = View.GONE
             holder.viewColor!!.setBackgroundColor(activity.getColor(R.color.green))
-        else
+
+        } else {
+            holder.status!!.setTextColor(activity.getColor(R.color.colorPrimary))
+            holder.status!!.text = "Finished"
+            holder.Feedback.visibility = View.GONE
+            holder.FeedbackSummary.visibility = View.VISIBLE
             holder.viewColor!!.setBackgroundColor(activity.getColor(R.color.foshia))
 
+        }
         holder.card.setOnClickListener {
 
             val bundle = Bundle()
@@ -71,6 +94,16 @@ class ScheduleAdapter(
 
         }
 
+        holder.FeedbackSummary.setOnClickListener {
+
+            IntentClass.goToActivity(
+                activity,
+                FeedbackSummaryActivity::class.java,
+                null
+            )
+
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -85,8 +118,8 @@ class ScheduleAdapter(
         var time: TextView? = null
         var viewColor: TextView? = null
         var address: TextView? = null
+        lateinit var FeedbackSummary: MaterialButton
         lateinit var Feedback: MaterialButton
-        var cancel: MaterialButton? = null
         lateinit var card: MaterialCardView
         fun initView(itemView: View) {
             image = itemView.findViewById(R.id.image)
@@ -96,7 +129,7 @@ class ScheduleAdapter(
             viewColor = itemView.findViewById(R.id.viewColor)
             address = itemView.findViewById(R.id.address)
             Feedback = itemView.findViewById(R.id.Feedback)
-            cancel = itemView.findViewById(R.id.cancel)
+            FeedbackSummary = itemView.findViewById(R.id.FeedbackSummary)
             card = itemView.findViewById(R.id.card)
         }
 

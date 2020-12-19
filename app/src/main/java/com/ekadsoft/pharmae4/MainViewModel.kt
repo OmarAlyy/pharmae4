@@ -14,9 +14,8 @@ import com.ekadsoft.pharmae4.View.Fragments.MoreFragment
 class MainViewModel : ViewModel() {
 
 
-    var activity: MainActivity? = null
+   lateinit var activity: MainActivity
     var itemSelector = ObservableInt()
-
 
     init {
         itemSelector = ObservableInt(1)
@@ -30,18 +29,24 @@ class MainViewModel : ViewModel() {
         var fragment: Fragment? = null
         when (type) {
             1 -> {
+                activity.binding.title.text = activity.getString(R.string.home)
                 fragment = HomeFragment()
                 fragment.enterTransition = Slide(Gravity.START)
             }
             2 -> {
+                activity.binding.title.text = activity.getString(R.string.Client)
+
                 fragment = ClientsFragment()
                 fragment.enterTransition = Slide(Gravity.BOTTOM)
             }
             3 -> {
+                activity.binding.title.text = activity.getString(R.string.Blog)
+
                 fragment = BlogFragment()
                 fragment.enterTransition = Slide(Gravity.END)
             }
             4 -> {
+                activity.binding.title.text = activity.getString(R.string.More)
                 fragment = MoreFragment()
                 fragment.enterTransition = Slide(Gravity.TOP)
             }

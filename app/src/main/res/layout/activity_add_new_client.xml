@@ -344,6 +344,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:padding="10dp"
+                    android:visibility="gone"
                     android:layout_margin="10dp"
                     android:layout_height="match_parent">
 
@@ -467,6 +468,400 @@ android:text="Female , 30 Years"                            />
 
 
 
+            <com.google.android.material.button.MaterialButton
+                android:backgroundTint="@color/grey"
+                android:layout_width="wrap_content"
+                app:cornerRadius="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Add New Client (for test)"
+                android:textSize="9sp"
+                android:onClick="@{()->viewmodel.addNewClient()}"
+
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:insetBottom="0dp"
+                android:insetTop="0dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textColor="@color/colorWhite"
+                android:layout_height="40dp" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/linAddNewClient"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="@{viewmodel.isNoClients ?View.VISIBLE:View.GONE , default=gone}"
+
+                android:layout_height="wrap_content">
+
+
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageAttach"
+                    android:layout_gravity="center"
+                    app:civ_border_color="@color/grey"
+                    android:src="@drawable/ic_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/upload_profile"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:theme="@style/Theme.MaterialComponents"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center"
+                    app:cornerRadius="5dp"
+                    android:textSize="10sp"
+                    android:text="@string/upload_profile"
+                    android:background="@android:color/transparent"
+                    app:strokeColor="@color/colorPrimary"
+                    app:strokeWidth="1dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui_b"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#1277d1"
+                        android:lineSpacingExtra="4sp"
+                        android:text="@string/first_name"
+                        />
+
+                        <EditText
+                            android:id="@+id/first_name"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:textDirection="ltr"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/first_name"
+                            android:inputType="text"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/shape_rounded_gray_stroke"
+                            android:layout_height="35dp" />
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content" />
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui_b"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#1277d1"
+                        android:lineSpacingExtra="4sp"
+                        android:text="@string/last_name"
+                        />
+
+                        <EditText
+                            android:id="@+id/last_name"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp"
+                            android:textDirection="ltr"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/last_name"
+                            android:inputType="text"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/shape_rounded_gray_stroke"
+                            android:layout_height="35dp" />
+
+
+
+                    </LinearLayout>
+
+                    
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/segoeui_b"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#1277d1"
+                        android:lineSpacingExtra="4sp"
+                        android:text="@string/mobile"
+                        />
+
+                        <LinearLayout
+                            android:id="@+id/linChoose_Country"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingEnd="12dp"
+                            android:paddingStart="12dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:layout_gravity="start|center"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/shape_rounded_gray_small_stroke"
+                            android:layout_height="35dp">
+
+                            <ImageView
+                                android:id="@+id/countryLogo"
+                                android:src="@drawable/ic_egypt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="10sp"
+                                android:layout_marginStart="10dp"
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="4sp"
+                                android:text="EG"
+                                />
+
+
+                            <ImageView
+                                android:layout_width="14sp"
+                                android:rotation="90"
+                                android:layout_marginStart="10dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/ic_arrow_right_24dp"
+                                android:layout_height="14sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/editPhone"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:textDirection="ltr"
+                        android:layout_marginTop="10dp"
+                        android:hint="100-300-500-2365"
+                        android:inputType="text"
+android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/shape_rounded_gray_stroke"
+                        android:layout_height="35dp" />
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/segoeui_b"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#1277d1"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/email" />
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:textDirection="ltr"
+                    android:layout_marginTop="6dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/shape_rounded_gray_stroke"
+                    android:layout_height="35dp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="4sp"
+                            android:text="@string/date_of_birth"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/lin_date_of_birth"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingEnd="12dp"
+                            android:paddingStart="12dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:layout_gravity="start|center"
+                            android:gravity="start|center"
+                            android:layout_weight="1"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/shape_rounded_gray_small_stroke"
+                            android:layout_height="35dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="10sp"
+                                android:textColor="#8d8b8b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="000-000-000"
+                                />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="4sp"
+                            android:text="@string/last_name"
+                            />
+                        <LinearLayout
+                            android:id="@+id/lin_Gender"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingEnd="12dp"
+                            android:paddingStart="12dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:layout_gravity="start|center"
+                            android:gravity="start|center"
+                            android:layout_weight="1"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/shape_rounded_gray_small_stroke"
+                            android:layout_height="35dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="10sp"
+                                android:textColor="#8d8b8b"
+                                android:layout_weight="1"
+                                android:lineSpacingExtra="4sp"
+                                android:text="@string/gender"
+                                />
+
+
+                            <ImageView
+                                android:layout_width="14sp"
+                                android:rotation="90"
+                                android:layout_marginStart="10dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/ic_arrow_right_24dp"
+                                android:layout_height="14sp" />
+                    </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
 
 
         </LinearLayout>
@@ -497,6 +892,11 @@ android:text="Female , 30 Years"                            />
             android:layout_height="match_parent">
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -504,12 +904,33 @@ android:text="Female , 30 Years"                            />
                 android:fontFamily="@font/segoeui_b"
                 android:textStyle="normal"
                 android:textSize="15sp"
+                android:layout_weight="1"
                 android:textColor="#1277d1"
                 android:lineSpacingExtra="5sp"
                 android:text="@string/client_address_branches_addresses"
                 />
 
+                <ImageView
+                    android:layout_width="20dp"
+                    android:rotation="90"
+                    android:visibility="@{viewmodel.isNoClients ?View.VISIBLE:View.GONE , default=gone}"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/ic_arrow_right_24dp"
+                    android:layout_height="20dp" />
 
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="@{viewmodel.isNoClients ?View.GONE:View.VISIBLE }"
+
+                android:layout_height="wrap_content">
 
 
             <TextView
@@ -538,6 +959,7 @@ android:text="Female , 30 Years"                            />
                 android:paddingTop="5dp"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:onClick="@{()->viewmodel.openBranche()}"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/shape_rounded_gray_small_stroke"
                 android:layout_height="wrap_content">
@@ -562,6 +984,7 @@ android:text="Female , 30 Years"                            />
 
 
                 <ImageView
+                    android:id="@+id/iconArrowShowAddress"
                     android:layout_width="20dp"
                     android:rotation="90"
                     android:tint="@color/colorPrimary"
@@ -576,7 +999,51 @@ android:text="Female , 30 Years"                            />
             <include layout="@layout/item_branche_show"
              />
 
-        </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:visibility="@{viewmodel.isNoClients ?View.VISIBLE:View.GONE }"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/item_branche_show_new_add_edit" />
+                <include layout="@layout/item_branche_show_new_add_edit" />
+
+
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/new_branch"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:theme="@style/Theme.MaterialComponents"
+                    android:insetBottom="0dp"
+                    android:insetTop="0dp"
+                    android:onClick="@{()->viewmodel.addNewBranch()}"
+
+                    app:cornerRadius="5dp"
+                    android:layout_margin="20dp"
+                    app:iconTint="@color/colorPrimary"
+                    app:icon="@drawable/ic_baseline_add_24"
+android:layout_gravity="center"
+                    android:textSize="10sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/new_branch"
+                    android:background="@android:color/transparent"
+                    app:strokeColor="@color/colorPrimary"
+                    app:strokeWidth="1dp" />
+
+
+            </LinearLayout>
+
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 

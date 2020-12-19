@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import com.ekadsoft.pharmae4.AddNewBlanViewModel
 import com.ekadsoft.pharmae4.R
-import com.ekadsoft.pharmae4.ScheduleViewModel
-import com.ekadsoft.pharmae4.databinding.ActivityClinicsScheduleBinding
+import com.ekadsoft.pharmae4.databinding.ActivityNewPlanBinding
 import com.michalsvec.singlerowcalendar.calendar.CalendarChangesObserver
 import com.michalsvec.singlerowcalendar.calendar.CalendarViewManager
 import com.michalsvec.singlerowcalendar.calendar.SingleRowCalendarAdapter
@@ -15,32 +15,30 @@ import com.michalsvec.singlerowcalendar.utils.DateUtils
 import kotlinx.android.synthetic.main.calendar_item.view.*
 import java.util.*
 
-class ScheduleActivity : AppCompatActivity() {
+class NewPlanActivity : AppCompatActivity() {
 
-   lateinit var binding: ActivityClinicsScheduleBinding
 
-    lateinit var viewmodel: ScheduleViewModel
-    var type = 0
+    lateinit var binding: ActivityNewPlanBinding
+    lateinit var viewmodel: AddNewBlanViewModel
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_clinics_schedule)
-        viewmodel = ViewModelProviders.of(this).get(ScheduleViewModel::class.java)
 
-        var bundle = intent.getBundleExtra("data")
-        type = bundle.getInt("type")
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_new_plan)
+        viewmodel = ViewModelProviders.of(this).get(AddNewBlanViewModel::class.java)
+
         viewmodel.activity = this
-        viewmodel.type.set(type)
         binding.viewmodel = viewmodel
+
         viewmodel.getData()
-
-        binding.back.setOnClickListener {
-            finish()
-
-        }
 
         initSingleRowCalendar()
 
+
     }
+
 
     fun initSingleRowCalendar() {
 
@@ -120,7 +118,6 @@ class ScheduleActivity : AppCompatActivity() {
             calendarViewManager = myCalendarViewManager
             calendarChangesObserver = myCalendarChangesObserver
             calendarSelectionManager = mySelectionManager
-            //  setDates(getFutureDatesOfCurrentMonth())
             futureDaysCount = 60
             includeCurrentDate = true
             init()
@@ -130,6 +127,7 @@ class ScheduleActivity : AppCompatActivity() {
 
 
     }
+
 
 
 }

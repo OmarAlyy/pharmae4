@@ -14,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Activities.AddNewClientActivity"></activity>
+        <activity android:name=".View.Activities.FeedbackSummaryActivity"></activity>
+        <activity android:name=".View.Activities.ScheduleHistoryActivity" />
+        <activity android:name=".View.Activities.NewPlanActivity" />
+        <activity android:name=".View.Activities.AddNewBranchActivity" />
+        <activity android:name=".View.Activities.AddNewClientActivity" />
         <activity android:name=".View.Activities.AddFeedbackActivity" />
         <activity android:name=".View.Activities.ReportsActivity" />
         <activity android:name=".View.Activities.ScheduleDetailsActivity" />

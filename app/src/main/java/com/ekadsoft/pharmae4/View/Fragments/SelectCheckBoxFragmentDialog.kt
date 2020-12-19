@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ekadsoft.pharmae4.AddClientViewModel
 import com.ekadsoft.pharmae4.Model.RadioTestModel
 import com.ekadsoft.pharmae4.R
-import com.ekadsoft.pharmae4.Utilities.GlobalVariables
 import com.ekadsoft.pharmae4.View.Adapters.RadioSelectAdapter
+import com.ekadsoft.pharmae4.View.Adapters.SelectCheckBoxAdapter
 import kotlinx.android.synthetic.main.select_dialog_fragment.view.*
 import java.util.*
 
-class SelectRadioFragmentDialog(
+class SelectCheckBoxFragmentDialog(
     var title: String,
     var addClientViewModel: AddClientViewModel,
     var typeSelect: Int
@@ -83,19 +83,7 @@ class SelectRadioFragmentDialog(
         vieww.ok.setOnClickListener(View.OnClickListener {
             if (id != "") {
 
-                if (typeSelect == GlobalVariables.TYPE_Client_Type) {
-                    addClientViewModel.clientTypeObservableField.set(name)
-                    addClientViewModel.clientTypeObservableFieldId.set(id)
-                }
 
-                if (typeSelect == GlobalVariables.TYPE_EntityClient) {
-                    addClientViewModel.clientEntityObservableField.set(name)
-                    addClientViewModel.clientEntityObservableFieldID.set(id)
-                }
-                if (typeSelect == GlobalVariables.TYPE_Choose_Client) {
-                    addClientViewModel.clientChooseObservableField.set(name)
-                    addClientViewModel.clientChooseObservableFieldId.set(id)
-                }
 
 
 
@@ -118,7 +106,6 @@ class SelectRadioFragmentDialog(
             for (i in 0..4) {
                 list.add(RadioTestModel(i.toString() + "", "test title", false))
             }
-            adapter = RadioSelectAdapter(this, list)
-            vieww.list.adapter = adapter
+            vieww.list.adapter =  SelectCheckBoxAdapter(addClientViewModel.activity, list)
         }
 }
