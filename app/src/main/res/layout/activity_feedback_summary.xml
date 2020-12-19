@@ -1,9 +1,682 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".View.Activities.FeedbackSummaryActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <import type="android.view.View" />
+        <import type="com.ekadsoft.pharmae4.Utilities.GlobalVariables" />
+
+        <variable
+            name="viewmodel"
+            type="com.ekadsoft.pharmae4.AddFeedBackDetailsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@color/white"
+        tools:context=".View.Activities.AddFeedbackActivity">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="26dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_back"
+                android:rotation="180"
+                android:onClick="@{()->viewmodel.back()}"
+
+                android:layout_gravity="start|center"
+                android:layout_height="26dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="18sp"
+
+                android:layout_gravity="center"
+                android:textColor="#1277d1"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                android:text="@string/feedback_summary" />
+
+
+        </FrameLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+                android:layout_height="wrap_content">
+
+
+
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/image"
+                            android:layout_gravity="top"
+                            android:src="@drawable/vector_drawable_circle"
+                            android:layout_width="40dp"
+
+                            android:layout_height="40dp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="12dp"
+                            android:layout_height="wrap_content">
+
+
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/segoeui_b"
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="5sp"
+                                android:text="Doctor Ahmed Karim"
+                                />
+
+                            <TextView
+                                android:id="@+id/jobTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Consultant in Pediatric Dentistry..."
+                                />
+
+
+                            <TextView
+                                android:id="@+id/jobDes"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="11sp"
+                                android:layout_marginTop="3dp"
+
+                                android:textColor="#8d8b8b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Dentist Specialized in Pediatric Dentistry..."
+                                />
+
+
+                            <TextView
+                                android:id="@+id/email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:layout_marginTop="3dp"
+                                android:textSize="11sp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="Ahmed Karim@gmail.com"
+                                />
+
+                            <TextView
+                                android:id="@+id/phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="11sp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="002-100 300 5689"
+                                />
+
+
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/iconType"
+                                android:layout_width="18dp"
+                                android:tint="@color/colorPrimary"
+                                android:src="@drawable/ic_hospital"
+                                android:layout_height="18dp" />
+
+                            <TextView
+                                android:id="@+id/textType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui_b"
+                                android:textStyle="normal"
+                                android:textSize="15sp"
+                                android:layout_marginStart="10dp"
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="5sp"
+                                android:text="Clinic"
+                                />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content" />
+
+
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_marginTop="10dp"
+                            android:textSize="12sp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="4sp"
+                            android:text="@string/your_appointment"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="start"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:src="@drawable/ic_calender"
+                                android:layout_height="12dp" />
+
+
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:textStyle="normal"
+                                android:textSize="11sp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="09:30 PM - 10:00 PM"
+                                />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="start"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:src="@drawable/ic_clock"
+                                android:layout_height="12dp" />
+
+
+
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:textStyle="normal"
+                                android:textSize="11sp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="09:30 PM - 10:00 PM"
+                                />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="start"
+                            android:paddingEnd="10dp"
+                            android:visibility="@{viewmodel.type== GlobalVariables.TYPE_VIDEO ? View.GONE : View.VISIBLE , default=gone}"
+
+                            android:gravity="center"
+                            android:layout_height="wrap_content">
+
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/logo"
+                                android:layout_gravity="center"
+                                android:src="@drawable/vector_drawable_circle"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" />
+
+
+
+                            <TextView
+                                android:id="@+id/nameOfPlace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="4sp"
+                                android:text="El-Shouroq (Nasr City)"
+                                />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="start"
+                            android:gravity="center"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:visibility="@{viewmodel.type== GlobalVariables.TYPE_VIDEO ? View.GONE : View.VISIBLE , default=gone}"
+
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:src="@drawable/ic_location"
+                                android:layout_height="12dp" />
+
+
+
+                            <TextView
+                                android:id="@+id/address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:textStyle="normal"
+                                android:textSize="11sp"
+                                android:textColor="#6b6b6b"
+                                android:lineSpacingExtra="4sp"
+                                android:text="43 Nakhla moteey st , Nasr City"
+                                />
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="start|center"
+                            android:layout_gravity="start|center"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textStyle="normal"
+                            android:textSize="15sp"
+                            android:layout_weight="1"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="5sp"
+                            android:text="@string/write_feedback"
+                            />
+
+
+                            <ImageView
+                                android:id="@+id/edit_feedback"
+                                android:layout_width="24dp"
+                                android:src="@drawable/ic_edit"
+                                android:layout_height="24dp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                             android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#8d8b8b"
+                            android:lineSpacingExtra="5sp"
+                            android:text="It is a long established fact that a reader will be distracted
+Heart pacemaker implantation surgery"
+                            />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="start|center"
+                            android:layout_gravity="start|center"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui_b"
+                                android:textStyle="normal"
+                                android:textSize="15sp"
+                                android:layout_weight="1"
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="5sp"
+                                android:text="@string/survey_form"
+                                />
+
+
+                            <ImageView
+                                android:id="@+id/edit_survey_form"
+                                android:layout_width="24dp"
+                                android:src="@drawable/ic_edit"
+                                android:layout_height="24dp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/segoeui_b"
+                            android:textStyle="normal"
+                            android:textSize="13sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#1277d1"
+                            android:lineSpacingExtra="4sp"
+                            android:text="Feedback 1 "
+                            />
+
+
+
+                        <TextView
+                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                             android:textStyle="normal"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#8d8b8b"
+                            android:lineSpacingExtra="5sp"
+                            android:text="It is a long established fact that a reader will be distracted
+Heart pacemaker implantation surgery"
+                            />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="start|center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/segoeui_b"
+                                android:textStyle="normal"
+                                android:textSize="15sp"
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="5sp"
+                                android:text="@string/attachment_files"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content" />
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/upload_photo"
+                                android:backgroundTint="#1277d1"
+                                android:layout_width="wrap_content"
+                                app:cornerRadius="5dp"
+                                android:text="@string/upload_photo"
+                                android:textSize="10sp"
+                                android:insetBottom="0dp"
+                                android:onClick="@{()->viewmodel.addImage()}"
+
+                                app:iconSize="14dp"
+                                android:insetTop="0dp"
+                                style="@style/Widget.AppCompat.Button.Colored"
+                                android:textColor="@color/colorWhite"
+                                android:layout_height="40dp" />
+
+                        </LinearLayout>
+
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listImages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/item_attachment_files" />
+
+
+
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/save"
+                    android:backgroundTint="#1277d1"
+                    android:layout_width="140dp"
+                    app:cornerRadius="10dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/save"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:insetBottom="0dp"
+                    android:onClick="@{()->viewmodel.save()}"
+                    android:insetTop="0dp"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="50dp" />
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

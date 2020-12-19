@@ -1,18 +1,18 @@
 package com.ekadsoft.pharmae4
 
 import android.Manifest
+import android.app.Activity
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.databinding.ObservableInt
 import androidx.lifecycle.ViewModel
 import com.ekadsoft.pharmae4.Images.imagePicker.Camera
-import com.ekadsoft.pharmae4.View.Activities.AddFeedbackActivity
 
 class AddFeedBackDetailsViewModel : ViewModel() {
 
 
-    lateinit var activity: AddFeedbackActivity
+    lateinit var activity: Activity
     var type = ObservableInt()
 
 
