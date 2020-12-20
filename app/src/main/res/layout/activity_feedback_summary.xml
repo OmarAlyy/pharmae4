@@ -19,8 +19,7 @@
         android:orientation="vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:background="@color/white"
-        tools:context=".View.Activities.AddFeedbackActivity">
+        android:background="@color/white">
 
 
         <FrameLayout
