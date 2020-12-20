@@ -15,7 +15,7 @@ import com.ekadsoft.pharmae4.R
 import com.ekadsoft.pharmae4.View.Adapters.AttachmentFilesAdapter
 import com.ekadsoft.pharmae4.databinding.ActivityFeedbackSummaryBinding
 import java.io.File
-import java.util.ArrayList
+import java.util.*
 
 class FeedbackSummaryActivity : AppCompatActivity() {
 
@@ -26,6 +26,7 @@ class FeedbackSummaryActivity : AppCompatActivity() {
     lateinit var binding: ActivityFeedbackSummaryBinding
     lateinit var viewmodel: AddFeedBackDetailsViewModel
     lateinit var adabterImages: AttachmentFilesAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
