@@ -65,6 +65,7 @@
     <string name="branches">Branches</string>
     <string name="reason_plan">Reason Plan</string>
     <string name="feedback_summary">Feedback Summary</string>
+    <string name="filter">Filter</string>
 
 
 </resources>

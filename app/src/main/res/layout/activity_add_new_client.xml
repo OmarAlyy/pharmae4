@@ -378,7 +378,7 @@
                             android:fontFamily="@font/segoeui_b"
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="5sp"
-                            android:text="Doctor Ahmed Karim"
+                            android:text="Doctor Ahmed"
                             />
 
                         <TextView

@@ -257,12 +257,10 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:layout_marginTop="3dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="20dp"
+                        android:layout_width="10dp"
                         android:background="@color/colorPrimary"
                         android:layout_height="3dp" />
 
@@ -272,8 +270,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="normal"
-                        android:textSize="10sp"
-                        android:layout_marginStart="10dp"
+                        android:textSize="8sp"
+                        android:layout_marginStart="5dp"
                         android:textColor="#8d8b8b"
                         android:lineSpacingExtra="-1sp"
                         android:gravity="center_horizontal"
@@ -287,7 +285,8 @@
 
 
                     <TextView
-                        android:layout_width="20dp"
+                        android:layout_width="10dp"
+                        android:layout_marginStart="5dp"
                         android:background="@color/green"
                         android:layout_height="3dp" />
 
@@ -297,8 +296,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="normal"
-                        android:textSize="10sp"
-                        android:layout_marginStart="10dp"
+                        android:textSize="8sp"
+                        android:layout_marginStart="5dp"
                         android:textColor="#8d8b8b"
                         android:lineSpacingExtra="-1sp"
                         android:gravity="center_horizontal"
@@ -312,7 +311,8 @@
 
 
                     <TextView
-                        android:layout_width="20dp"
+                        android:layout_width="10dp"
+                        android:layout_marginStart="5dp"
                         android:background="@color/foshia"
                         android:layout_height="3dp" />
 
@@ -322,10 +322,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="normal"
-                        android:textSize="10sp"
-                        android:layout_marginStart="10dp"
+                        android:textSize="8sp"
+                        android:layout_marginStart="5dp"
                         android:textColor="#8d8b8b"
-                        android:lineSpacingExtra="-1sp"
                         android:gravity="center_horizontal"
                         android:text="20 Video Call"
                         />

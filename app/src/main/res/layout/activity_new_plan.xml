@@ -117,7 +117,7 @@
                                 android:textSize="15sp"
                                 android:textColor="#4f4f4f"
                                 android:lineSpacingExtra="5sp"
-                                android:text="Doctor Ahmed Karim"
+                                android:text="Doctor Ahmed"
                                 />
 
 
@@ -390,6 +390,8 @@
                     android:id="@+id/list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+
                     android:layout_marginStart="12dp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginTop="12dp"

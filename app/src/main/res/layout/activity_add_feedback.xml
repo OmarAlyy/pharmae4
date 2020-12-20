@@ -119,7 +119,7 @@
                             android:fontFamily="@font/segoeui_b"
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="5sp"
-                            android:text="Doctor Ahmed Karim"
+                            android:text="Doctor Ahmed"
                             />
 
                         <TextView
@@ -606,6 +606,8 @@ android:gravity="top|start"
                         android:layout_height="match_parent"
                         android:nestedScrollingEnabled="false"
                         android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:listitem="@layout/item_attachment_files" />
