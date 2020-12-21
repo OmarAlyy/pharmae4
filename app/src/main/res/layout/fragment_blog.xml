@@ -13,6 +13,8 @@
         android:gravity="center"
         android:padding="30dp"
         android:textSize="30dp"
+        android:textStyle="bold"
+
         android:fontFamily="@font/segoeui_b"
         android:textColor="@color/colorPrimary"
         android:text="In Next Version"

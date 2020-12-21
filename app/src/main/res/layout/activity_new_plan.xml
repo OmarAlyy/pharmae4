@@ -94,9 +94,10 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/image"
                             android:layout_gravity="top"
-                            android:src="@drawable/vector_drawable_circle"
                             android:layout_width="40dp"
-
+                            android:src="@drawable/test"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/grayBottom"
                             android:layout_height="40dp" />
 
 
@@ -226,7 +227,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/segoeui_b"
-                            android:textStyle="normal"
+                            android:textStyle="bold"
+
                             android:textSize="15sp"
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="5sp"
@@ -265,7 +267,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/segoeui_b"
-                            android:textStyle="normal"
+                            android:textStyle="bold"
                             android:textSize="12sp"
                             android:textColor="#1277d1"
                             android:layout_marginEnd="10dp"
@@ -290,7 +292,8 @@
                             android:onClick="@{()->viewmodel.openBranche()}"
                             android:layout_marginTop="8dp"
                             android:background="@drawable/shape_rounded_gray_small_stroke"
-                            android:layout_height="wrap_content">
+                            android:textSize="10dp"
+                            android:layout_height="30dp">
 
 
                             <TextView
@@ -298,7 +301,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/segoeui_b"
-                                android:textStyle="normal"
+                                android:textStyle="bold"
                                 android:textSize="10sp"
                                 android:textColor="#8d8b8b"
                                 android:lineSpacingExtra="4sp"
@@ -432,7 +435,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/segoeui_b"
-                            android:textStyle="normal"
+                            android:textStyle="bold"
                             android:textSize="15sp"
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="5sp"
@@ -479,18 +482,20 @@
                     android:backgroundTint="#1277d1"
                     android:layout_width="140dp"
                     app:cornerRadius="10dp"
-                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
                     android:text="@string/save"
                     android:textSize="15sp"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:includeFontPadding="false"
                     android:insetBottom="0dp"
                     android:onClick="@{()->viewmodel.save()}"
                     android:insetTop="0dp"
+                    android:layout_marginTop="40dp"
+
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:textColor="@color/colorWhite"
-                    android:layout_height="50dp" />
+                    android:layout_height="40dp" />
 
 
 

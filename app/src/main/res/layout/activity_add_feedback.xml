@@ -85,7 +85,7 @@
                     android:orientation="horizontal"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     android:layout_margin="10dp"
                     android:layout_height="match_parent">
 
@@ -95,7 +95,9 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/image"
                         android:layout_gravity="top"
-                        android:src="@drawable/vector_drawable_circle"
+                        android:src="@drawable/test"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/grayBottom"
                         android:layout_width="40dp"
 
                         android:layout_height="40dp" />
@@ -114,7 +116,7 @@
                             android:id="@+id/name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="normal"
+                            android:textStyle="bold"
                             android:textSize="13sp"
                             android:fontFamily="@font/segoeui_b"
                             android:textColor="#1277d1"
@@ -234,7 +236,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/segoeui_b"
-                            android:textStyle="normal"
+                            android:textStyle="bold"
                             android:textSize="15sp"
                             android:layout_marginStart="10dp"
                             android:textColor="#1277d1"
@@ -257,7 +259,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="normal"
+                        android:textStyle="bold"
                         android:layout_marginTop="10dp"
                         android:textSize="12sp"
                         android:paddingStart="10dp"
@@ -447,7 +449,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/segoeui_b"
-                android:textStyle="normal"
+                android:textStyle="bold"
                 android:textSize="15sp"
                 android:textColor="#1277d1"
                 android:lineSpacingExtra="5sp"
@@ -498,7 +500,7 @@ android:gravity="top|start"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/segoeui_b"
-                        android:textStyle="normal"
+                        android:textStyle="bold"
                         android:textSize="15sp"
                         android:textColor="#1277d1"
                         android:lineSpacingExtra="5sp"
@@ -510,7 +512,7 @@ android:gravity="top|start"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/segoeui_b"
-                        android:textStyle="normal"
+                        android:textStyle="bold"
                         android:textSize="13sp"
                         android:layout_marginTop="10dp"
                         android:textColor="#1277d1"
@@ -589,12 +591,12 @@ android:gravity="top|start"
                             android:textSize="10sp"
                             android:insetBottom="0dp"
                             android:onClick="@{()->viewmodel.addImage()}"
-
+android:includeFontPadding="false"
                             app:iconSize="14dp"
                             android:insetTop="0dp"
                             style="@style/Widget.AppCompat.Button.Colored"
                             android:textColor="@color/colorWhite"
-                            android:layout_height="40dp" />
+                            android:layout_height="35dp" />
 
                     </LinearLayout>
 
@@ -625,7 +627,7 @@ android:gravity="top|start"
                 android:backgroundTint="#1277d1"
                 android:layout_width="140dp"
                 app:cornerRadius="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
 
                 android:layout_marginBottom="20dp"
                 android:text="@string/save"
@@ -635,9 +637,11 @@ android:gravity="top|start"
                 android:insetBottom="0dp"
                 android:onClick="@{()->viewmodel.save()}"
                 android:insetTop="0dp"
+                android:includeFontPadding="false"
+
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:textColor="@color/colorWhite"
-                android:layout_height="50dp" />
+                android:layout_height="40dp" />
 
 
 

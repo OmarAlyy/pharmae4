@@ -12,34 +12,46 @@
     </data>
 
 
-    <androidx.core.widget.NestedScrollView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:gravity="center"
         android:background="@color/colorWhite"
-        android:padding="30dp"
-        android:layout_height="match_parent"
-        tools:context=".View.Activities.LoginActivity">
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="center"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="45dp"
+android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="match_parent">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_margin="30dp"
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="80dp"
-                android:src="@drawable/logo2"
-                android:layout_height="80dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/segoeui_b"
-                android:textStyle="normal"
-                android:textSize="30sp"
+                android:fontFamily="@font/font_bold"
+                android:textStyle="bold"
+
+                android:textSize="25sp"
+
                 android:layout_marginTop="30dp"
                 android:textColor="#1277d1"
                 android:lineSpacingExtra="8sp"
@@ -49,8 +61,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/segoeui_b"
-                android:textStyle="normal"
-                android:textSize="35sp"
+                 android:textSize="30sp"
+
+                android:textStyle="bold"
+
                 android:layout_marginTop="30dp"
                 android:textColor="#1277d1"
                 android:lineSpacingExtra="10sp"
@@ -74,18 +88,20 @@
                 android:paddingEnd="10dp"
                 android:paddingStart="10dp"
                 android:textDirection="ltr"
+                android:hint="@string/email"
+                android:textSize="10sp"
                 android:onTextChanged="@{viewmodel::onEmailChanged}"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="3dp"
                 android:inputType="textEmailAddress"
                 android:layout_width="match_parent"
                 android:background="@drawable/shape_rounded_gray_stroke"
-                android:layout_height="40dp" />
+                android:layout_height="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="26dp"
                 android:textStyle="normal"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:textSize="12sp"
                 android:layout_marginStart="3dp"
                 android:layout_gravity="start"
@@ -95,15 +111,17 @@
 
             <EditText
                 android:id="@+id/Password"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="3dp"
                 android:paddingEnd="10dp"
                 android:textDirection="ltr"
+                android:textSize="10sp"
+                android:hint="@string/password"
                 android:onTextChanged="@{viewmodel::onPasswordChanged}"
                 android:paddingStart="10dp"
                 android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:background="@drawable/shape_rounded_gray_stroke"
-                android:layout_height="40dp" />
+                android:layout_height="30dp" />
 
 
             <TextView
@@ -122,6 +140,7 @@
                 android:text="@string/forget_password" />
 
 
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login"
                 android:onClick="@{()->viewmodel.login()}"
@@ -129,12 +148,22 @@
                 android:layout_width="160dp"
                 app:cornerRadius="10dp"
                 android:text="@string/login"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:includeFontPadding="false"
+                  android:insetTop="0dp"
+                android:textSize="15sp"
+                android:textAllCaps="false"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:textColor="@color/colorWhite"
-                android:layout_marginTop="40dp"
-                android:layout_height="wrap_content" />
+                android:layout_marginTop="30dp"
+                android:layout_height="36dp" />
+
 
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
 </layout>

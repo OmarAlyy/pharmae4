@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Activities.FeedbackSummaryActivity"></activity>
+
+        <activity android:name=".View.Activities.LoginPageActivity"></activity>
+        <activity android:name=".View.Activities.FeedbackSummaryActivity" />
         <activity android:name=".View.Activities.ScheduleHistoryActivity" />
         <activity android:name=".View.Activities.NewPlanActivity" />
         <activity android:name=".View.Activities.AddNewBranchActivity" />

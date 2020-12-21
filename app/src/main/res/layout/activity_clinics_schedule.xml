@@ -315,9 +315,9 @@
                             android:layout_height="wrap_content">
 
                             <ImageView
-                                android:layout_width="18dp"
+                                android:layout_width="15dp"
                                 android:src="@drawable/ic_filter"
-                                android:layout_height="18dp" />
+                                android:layout_height="15dp" />
 
 
                             <TextView
@@ -325,11 +325,14 @@
                                 android:layout_height="wrap_content"
                                 android:textStyle="normal"
                                 android:textSize="10sp"
+                                android:layout_marginStart="5dp"
                                 android:textColor="#1277d1"
                                 android:text="@string/filter" />
 
 
                         </LinearLayout>
+
+
 
                     </com.google.android.material.card.MaterialCardView>
 
@@ -354,17 +357,39 @@
                         android:layout_height="wrap_content">
 
 
-                        <TextView
-                            android:id="@+id/tvDate"
+                        <LinearLayout
+                            android:id="@+id/linYears"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="normal"
-                            android:textSize="12sp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="start|center"
+                            android:gravity="center"
                             android:layout_margin="16dp"
-                            android:textColor="#1277d1"
-                            android:lineSpacingExtra="4sp"
-                            android:text="August 2020" />
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_height="wrap_content">
 
+
+                            <TextView
+                                android:id="@+id/tvDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="normal"
+                                android:textSize="12sp"
+
+                                android:textColor="#1277d1"
+                                android:lineSpacingExtra="4sp"
+                                android:text="August 2020"
+                                />
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:tint="@color/colorPrimary"
+                                android:rotation="90"
+                                android:src="@drawable/ic_arrow_right_24dp"
+                                android:layout_height="10dp" />
+
+                        </LinearLayout>
 
                         <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
                             android:id="@+id/main_single_row_calendar"

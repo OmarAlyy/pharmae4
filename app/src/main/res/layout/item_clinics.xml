@@ -29,7 +29,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image"
             android:layout_gravity="top"
-            android:src="@drawable/vector_drawable_circle"
+            android:src="@drawable/test"
             android:layout_width="40dp"
             android:layout_height="40dp" />
 
@@ -151,7 +151,7 @@ android:layout_marginStart="10dp"
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 android:layout_gravity="end"
                 android:gravity="center"
 android:layout_marginBottom="5dp"
@@ -166,13 +166,14 @@ android:layout_marginBottom="5dp"
                     android:layout_marginEnd="10dp"
                     android:text="@string/Feedback"
                     android:textSize="10sp"
+                    android:includeFontPadding="false"
                     android:insetBottom="0dp"
                     app:iconSize="14dp"
                     android:insetTop="0dp"
                     app:icon="@drawable/ic_baseline_add_24"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:textColor="@color/colorWhite"
-                    android:layout_height="35dp" />
+                    android:layout_height="30dp" />
 
 
 
@@ -180,10 +181,12 @@ android:layout_marginBottom="5dp"
                     android:id="@+id/cancel"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="30dp"
                     android:theme="@style/Theme.MaterialComponents"
                     android:insetBottom="0dp"
                     android:insetTop="0dp"
+                    android:includeFontPadding="false"
+
                     app:cornerRadius="5dp"
                     android:textSize="10sp"
 

@@ -53,8 +53,10 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/image"
-                    android:src="@drawable/vector_drawable_cicrle_"
+                    android:src="@drawable/test"
                     android:layout_width="50dp"
+                    app:civ_border_color="@color/grayBottom"
+                    app:civ_border_width="1dp"
                     android:layout_height="50dp" />
 
                 <LinearLayout
@@ -72,8 +74,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
                             android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/font_bold"
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="8sp"
                             android:text="@string/welcome" />
@@ -146,6 +149,17 @@
 
 
 
+                <LinearLayout
+                    android:id="@+id/linYears"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="start|center"
+                    android:gravity="center"
+                    android:layout_margin="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="wrap_content">
+
 
                 <TextView
                     android:id="@+id/tvDate"
@@ -153,12 +167,21 @@
                     android:layout_height="wrap_content"
                     android:textStyle="normal"
                     android:textSize="12sp"
-                    android:layout_margin="16dp"
+
                     android:textColor="#1277d1"
                     android:lineSpacingExtra="4sp"
                     android:text="August 2020"
                     />
 
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:tint="@color/colorPrimary"
+                    android:rotation="90"
+                    android:src="@drawable/ic_arrow_right_24dp"
+                    android:layout_height="10dp" />
+
+                </LinearLayout>
 
 
                 <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
@@ -260,7 +283,7 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="10dp"
+                        android:layout_width="12dp"
                         android:background="@color/colorPrimary"
                         android:layout_height="3dp" />
 
@@ -285,7 +308,7 @@
 
 
                     <TextView
-                        android:layout_width="10dp"
+                        android:layout_width="12dp"
                         android:layout_marginStart="5dp"
                         android:background="@color/green"
                         android:layout_height="3dp" />
@@ -311,7 +334,7 @@
 
 
                     <TextView
-                        android:layout_width="10dp"
+                        android:layout_width="12dp"
                         android:layout_marginStart="5dp"
                         android:background="@color/foshia"
                         android:layout_height="3dp" />
@@ -375,6 +398,8 @@ android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
+                    android:fontFamily="@font/font_bold"
+
                     android:layout_marginStart="9dp"
                     android:textColor="#4f4f4f"
                     android:text="@string/clinics"
@@ -390,8 +415,9 @@ android:clickable="true"
                     android:layout_height="wrap_content"
                     android:textStyle="normal"
                     android:textSize="10sp"
-                    android:layout_marginEnd="25dp"
+                    android:fontFamily="@font/font_bold"
                     android:textColor="#4f4f4f"
+                    android:layout_marginEnd="25dp"
                     android:lineSpacingExtra="4sp"
                     android:text="Total Vist"
                     />
@@ -442,6 +468,8 @@ android:clickable="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
+                    android:fontFamily="@font/font_bold"
+
                     android:layout_marginStart="9dp"
                     android:textColor="#4f4f4f"
                     android:text="@string/Pharmacies"
@@ -510,6 +538,8 @@ android:layout_marginBottom="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
+                    android:fontFamily="@font/font_bold"
+
                     android:layout_marginStart="9dp"
                     android:textColor="#4f4f4f"
                     android:text="@string/video_call"

@@ -10,16 +10,16 @@ import com.ekadsoft.pharmae4.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
-    var viewmodel: LoginViewModel? = null
+  lateinit  var viewmodel: LoginViewModel
 
-    var binding: ActivityLoginBinding? = null
+    lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
         viewmodel = ViewModelProviders.of(this).get(LoginViewModel::class.java)
-        viewmodel!!.activity = this
-        binding?.viewmodel = viewmodel
-
-        binding?.login!!.performClick()
+        viewmodel.activity = this
+         binding.viewmodel = viewmodel
+        binding.login
+        binding.login!!.performClick()
     }
 }
