@@ -624,12 +624,12 @@ Heart pacemaker implantation surgery"
                                 android:textSize="10sp"
                                 android:insetBottom="0dp"
                                 android:onClick="@{()->viewmodel.addImage()}"
-
-                                app:iconSize="14dp"
+android:includeFontPadding="false"
+                                app:iconSize="10dp"
                                 android:insetTop="0dp"
                                 style="@style/Widget.AppCompat.Button.Colored"
                                 android:textColor="@color/colorWhite"
-                                android:layout_height="40dp" />
+                                android:layout_height="32dp" />
 
                         </LinearLayout>
 

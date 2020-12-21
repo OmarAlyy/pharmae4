@@ -592,11 +592,11 @@ android:gravity="top|start"
                             android:insetBottom="0dp"
                             android:onClick="@{()->viewmodel.addImage()}"
 android:includeFontPadding="false"
-                            app:iconSize="14dp"
+                            app:iconSize="10dp"
                             android:insetTop="0dp"
                             style="@style/Widget.AppCompat.Button.Colored"
                             android:textColor="@color/colorWhite"
-                            android:layout_height="35dp" />
+                            android:layout_height="32dp" />
 
                     </LinearLayout>
 

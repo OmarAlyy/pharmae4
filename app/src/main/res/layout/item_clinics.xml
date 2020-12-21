@@ -8,6 +8,8 @@
     android:id="@+id/card"
     android:clickable="true"
     app:cardElevation="6dp"
+    android:layout_marginBottom="4dp"
+
     android:layout_marginEnd="10dp"
     android:layout_marginStart="10dp"
     android:layout_height="wrap_content">
@@ -168,12 +170,13 @@ android:layout_marginBottom="5dp"
                     android:textSize="10sp"
                     android:includeFontPadding="false"
                     android:insetBottom="0dp"
-                    app:iconSize="14dp"
+                    app:iconSize="10dp"
+                    app:iconGravity="textStart"
                     android:insetTop="0dp"
                     app:icon="@drawable/ic_baseline_add_24"
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:textColor="@color/colorWhite"
-                    android:layout_height="30dp" />
+                    android:layout_height="32dp" />
 
 
 
@@ -181,7 +184,7 @@ android:layout_marginBottom="5dp"
                     android:id="@+id/cancel"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="30dp"
+                    android:layout_height="32dp"
                     android:theme="@style/Theme.MaterialComponents"
                     android:insetBottom="0dp"
                     android:insetTop="0dp"
