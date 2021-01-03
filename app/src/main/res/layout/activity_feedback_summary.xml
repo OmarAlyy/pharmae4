@@ -40,8 +40,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="normal"
-                android:textSize="18sp"
+                 android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/segoeui_b"
 
                 android:layout_gravity="center"
                 android:textColor="#1277d1"

@@ -38,12 +38,11 @@ class ReportsActivity : AppCompatActivity() {
             numbers.add((num * i).toString())
 
         }
-        numbers.add("0")
 
         for (i in 0..months.size - 1) {
             list.add(
                 ReportsTargetsAndDonePlansModel(
-                    months.get(i),
+                    months.get(i).substring(0 , 3),
                     (Math.random() * (max - min + 1) + min).toInt(),
                     (Math.random() * (max - min + 1) + min).toInt()
                 )
