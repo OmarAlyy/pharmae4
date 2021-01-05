@@ -32,6 +32,7 @@
             android:layout_gravity="top"
             android:src="@drawable/test"
             app:civ_border_width="1dp"
+            android:layout_marginTop="5dp"
             app:civ_border_color="@color/grayBottom"
             android:layout_width="40dp"
 
@@ -50,6 +51,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
+                android:layout_gravity="top"
                 android:layout_height="wrap_content">
 
 
@@ -60,7 +62,6 @@
                     android:textStyle="normal"
                     android:textSize="15sp"
                     android:textColor="#4f4f4f"
-                    android:lineSpacingExtra="5sp"
                     android:text="Doctor Ahmed"
                     />
 
@@ -93,7 +94,6 @@
                 android:orientation="horizontal"
                 android:layout_gravity="start|center"
                 android:gravity="start|center"
-                android:layout_marginTop="5dp"
                  android:layout_height="wrap_content">
 
                 <ImageView
@@ -132,7 +132,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="normal"
-                android:layout_marginTop="3dp"
                 android:textSize="11sp"
                 android:textColor="#6b6b6b"
                 android:lineSpacingExtra="4sp"
@@ -145,7 +144,6 @@
                 android:layout_height="wrap_content"
                 android:textStyle="normal"
                 android:textSize="11sp"
-                android:layout_marginTop="3dp"
                 android:textColor="#6b6b6b"
                 android:lineSpacingExtra="4sp"
                 android:text="002-100 300 5689"
@@ -157,12 +155,13 @@
                 android:backgroundTint="#1277d1"
                 android:layout_width="wrap_content"
                 app:cornerRadius="5dp"
+                android:textAllCaps="false"
                 android:text="@string/new_plan"
                 android:textSize="10sp"
                 android:insetBottom="0dp"
                 android:layout_gravity="end"
-
-                app:iconSize="10dp"
+android:includeFontPadding="false"
+                app:iconSize="14dp"
                 android:insetTop="0dp"
                 app:icon="@drawable/ic_baseline_add_24"
                 style="@style/Widget.AppCompat.Button.Colored"

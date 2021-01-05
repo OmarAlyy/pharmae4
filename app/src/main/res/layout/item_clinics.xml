@@ -22,7 +22,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:padding="12dp"
-        android:layout_margin="10dp"
+        android:layout_margin="6dp"
         android:layout_height="match_parent">
 
 
@@ -73,8 +73,9 @@
                     android:id="@+id/status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="normal"
+                    android:textStyle="bold"
                     android:textSize="10sp"
+
                     android:textColor="#ffbe43"
                     android:lineSpacingExtra="4sp"
                     android:gravity="end"
@@ -88,7 +89,6 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="start"
                 android:gravity="center"
                 android:layout_height="wrap_content">
@@ -121,7 +121,6 @@ android:layout_marginStart="10dp"
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="start"
                 android:gravity="center"
                 android:layout_height="wrap_content">
@@ -165,6 +164,7 @@ android:layout_marginBottom="5dp"
                     android:backgroundTint="#1277d1"
                     android:layout_width="wrap_content"
                     app:cornerRadius="5dp"
+                    android:textAllCaps="false"
                     android:layout_marginEnd="10dp"
                     android:text="@string/Feedback"
                     android:textSize="10sp"
@@ -185,15 +185,13 @@ android:layout_marginBottom="5dp"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
+                    android:textAllCaps="false"
                     android:theme="@style/Theme.MaterialComponents"
                     android:insetBottom="0dp"
                     android:insetTop="0dp"
                     android:includeFontPadding="false"
-
                     app:cornerRadius="5dp"
                     android:textSize="10sp"
-
-
                     android:text="@string/cancel"
                     android:background="@android:color/transparent"
                     app:strokeColor="@color/colorPrimary"

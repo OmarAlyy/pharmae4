@@ -1,5 +1,7 @@
 package com.ekadsoft.pharmae4.View.Fragments
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +20,12 @@ class FilterDialogFragment : DialogFragment() {
     ): View? {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_filter_dialog, container, false)
-        getDialog()!!.getWindow()!!.requestFeature(Window.FEATURE_NO_TITLE);
+
+
+        if (getDialog() != null && getDialog()!!.getWindow() != null) {
+            getDialog()!!.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
+            getDialog()!!.getWindow()!!.requestFeature(Window.FEATURE_NO_TITLE);
+        }
 
         view.close.setOnClickListener { dismiss() }
         view.Search.setOnClickListener { dismiss() }

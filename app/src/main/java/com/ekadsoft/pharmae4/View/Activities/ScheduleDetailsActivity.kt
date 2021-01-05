@@ -33,12 +33,12 @@ class ScheduleDetailsActivity : AppCompatActivity() {
         if (type == GlobalVariables.TYPE_CLINICS) {
 
             binding.iconType.setImageResource(R.drawable.ic_hospital)
-            binding.textType.setText(R.string.clinics)
+            binding.textType.setText(R.string.clinic)
 
         } else
             if (type == GlobalVariables.TYPE_VIDEO) {
 
-                binding.iconType.setImageResource(R.drawable.ic_phone)
+                binding.iconType.setImageResource(R.drawable.ic_phone2)
                 binding.textType.setText(R.string.video_call)
 
             } else

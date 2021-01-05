@@ -74,6 +74,8 @@
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="10dp"
                     android:layout_marginTop="12dp"
+                    android:includeFontPadding="false"
+
                     app:cardElevation="6dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
@@ -198,6 +200,8 @@
                     app:cardCornerRadius="10dp"
                     android:layout_marginTop="12dp"
                     app:cardElevation="6dp"
+                    android:includeFontPadding="false"
+
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_height="wrap_content">
@@ -227,7 +231,6 @@
                             <ImageView
                                 android:id="@+id/iconType"
                                 android:layout_width="18dp"
-                                android:tint="@color/colorPrimary"
                                 android:src="@drawable/ic_hospital"
                                 android:layout_height="18dp" />
 
@@ -428,6 +431,8 @@
                     app:cardCornerRadius="10dp"
                     android:layout_marginTop="12dp"
                     app:cardElevation="6dp"
+                    android:includeFontPadding="false"
+
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_height="wrap_content">
@@ -493,6 +498,8 @@ Heart pacemaker implantation surgery"
                     android:layout_width="match_parent"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="10dp"
+                    android:includeFontPadding="false"
+
                     android:layout_marginTop="12dp"
                     app:cardElevation="6dp"
                     android:layout_marginEnd="10dp"
@@ -573,6 +580,8 @@ Heart pacemaker implantation surgery"
 
                     android:layout_width="match_parent"
                     app:cardBackgroundColor="@color/white"
+                    android:includeFontPadding="false"
+
                     app:cardCornerRadius="10dp"
                     android:layout_marginTop="12dp"
                     app:cardElevation="6dp"
@@ -619,8 +628,11 @@ Heart pacemaker implantation surgery"
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/upload_photo"
                                 android:backgroundTint="#1277d1"
+                                android:textAllCaps="false"
+
                                 android:layout_width="wrap_content"
                                 app:cornerRadius="5dp"
+
                                 android:text="@string/upload_photo"
                                 android:textSize="10sp"
                                 android:insetBottom="0dp"
@@ -659,6 +671,8 @@ android:includeFontPadding="false"
                     android:backgroundTint="#1277d1"
                     android:layout_width="140dp"
                     app:cornerRadius="10dp"
+                    android:textAllCaps="false"
+
 
                     android:layout_marginBottom="20dp"
                     android:text="@string/save"

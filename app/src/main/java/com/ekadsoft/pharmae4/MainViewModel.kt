@@ -34,7 +34,7 @@ class MainViewModel : ViewModel() {
                 fragment.enterTransition = Slide(Gravity.START)
             }
             2 -> {
-                activity.binding.title.text = activity.getString(R.string.Client)
+                activity.binding.title.text = activity.getString(R.string.ClientList)
 
                 fragment = ClientsFragment()
                 fragment.enterTransition = Slide(Gravity.BOTTOM)

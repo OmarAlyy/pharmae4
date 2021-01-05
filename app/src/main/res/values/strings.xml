@@ -66,6 +66,8 @@
     <string name="reason_plan">Reason Plan</string>
     <string name="feedback_summary">Feedback Summary</string>
     <string name="filter">Filter</string>
+    <string name="ClientList">Client List</string>
+    <string name="clinic">clinic</string>
 
 
 </resources>

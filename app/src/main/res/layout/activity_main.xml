@@ -26,10 +26,10 @@
             android:layout_height="60dp">
 
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="37dp"
                 android:src="@drawable/logo2"
                 android:layout_gravity="start|center"
-                android:layout_height="40dp" />
+                android:layout_height="37dp" />
 
             <TextView
                 android:id="@+id/title"
@@ -45,21 +45,61 @@
                 android:text="Home"
                 />
 
+<FrameLayout
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_gravity="end|center"
 
-            <ImageView
-                android:id="@+id/inbox"
-                android:layout_width="24dp"
-                android:layout_marginEnd="40dp"
-                android:src="@drawable/ic_inbox"
-                android:layout_gravity="end|center"
-                android:layout_height="24dp" />
+    android:layout_marginEnd="40dp">
 
-            <ImageView
-                android:id="@+id/notification"
-                android:layout_width="24dp"
-                android:src="@drawable/ic_notification"
-                android:layout_gravity="end|center"
-                android:layout_height="24dp" />
+
+
+    <ImageView
+        android:id="@+id/inbox"
+        android:layout_width="24dp"
+        android:src="@drawable/ic_inbox"
+        android:layout_height="24dp" />
+    
+    <TextView
+        android:layout_width="8dp"
+        android:textSize="6sp"
+        android:layout_gravity="top|end"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/circle_background_cart_red"
+        android:layout_height="8dp">
+
+
+    </TextView>
+</FrameLayout>
+<FrameLayout
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_gravity="end|center">
+
+
+
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="24dp"
+        android:src="@drawable/ic_notification"
+        android:layout_height="24dp" />
+
+    <TextView
+        android:layout_width="8dp"
+        android:textSize="6sp"
+        android:layout_gravity="top|end"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/circle_background_cart_red"
+        android:layout_height="8dp">
+
+
+    </TextView>
+</FrameLayout>
+
         </FrameLayout>
 
 
@@ -75,6 +115,8 @@
             android:layout_width="match_parent"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
+            android:includeFontPadding="false"
+
             app:cardPreventCornerOverlap="true"
             android:layout_height="60dp">
 
@@ -150,7 +192,7 @@ android:onClick="@{()->viewmodel.showFragment(1)}"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
-                        android:text="@string/Client"
+                        android:text="@string/client"
                         />
 
                 </LinearLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ekadsoft.pharmae4.Model.ClinicsModel
@@ -47,6 +48,7 @@ class ScheduleHistoryAdapter(
 
             holder.Feedback.visibility = View.VISIBLE
             holder.status!!.setTextColor(activity.getColor(R.color.colorPrimary))
+            holder.linLocations.visibility = View.VISIBLE
 
             holder.FeedbackSummary.visibility = View.GONE
             holder.status!!.text = "Finished"
@@ -59,6 +61,8 @@ class ScheduleHistoryAdapter(
 
             holder.status!!.setTextColor(activity.getColor(R.color.red))
 
+            holder.linLocations.visibility = View.VISIBLE
+
             holder.Feedback.visibility = View.GONE
             holder.FeedbackSummary.visibility = View.GONE
             holder.viewColor!!.setBackgroundColor(activity.getColor(R.color.green))
@@ -68,6 +72,7 @@ class ScheduleHistoryAdapter(
             holder.status!!.text = "Finished"
             holder.Feedback.visibility = View.GONE
             holder.FeedbackSummary.visibility = View.VISIBLE
+            holder.linLocations.visibility = View.GONE
             holder.viewColor!!.setBackgroundColor(activity.getColor(R.color.foshia))
 
         }
@@ -118,6 +123,7 @@ class ScheduleHistoryAdapter(
         var time: TextView? = null
         var viewColor: TextView? = null
         var address: TextView? = null
+        lateinit var linLocations: LinearLayout
         lateinit var FeedbackSummary: MaterialButton
         lateinit var Feedback: MaterialButton
         lateinit var card: MaterialCardView
@@ -129,6 +135,7 @@ class ScheduleHistoryAdapter(
             viewColor = itemView.findViewById(R.id.viewColor)
             address = itemView.findViewById(R.id.address)
             Feedback = itemView.findViewById(R.id.Feedback)
+            linLocations = itemView.findViewById(R.id.linLocations)
             FeedbackSummary = itemView.findViewById(R.id.FeedbackSummary)
             card = itemView.findViewById(R.id.card)
         }

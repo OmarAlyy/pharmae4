@@ -73,6 +73,8 @@
             android:layout_marginTop="12dp"
             app:cardElevation="6dp"
             android:layout_marginEnd="10dp"
+            android:includeFontPadding="false"
+
             android:layout_marginStart="10dp"
             android:layout_height="wrap_content">
 
@@ -96,6 +98,8 @@
                 android:fontFamily="@font/segoeui_b"
                 android:textStyle="bold"
                 android:textSize="15sp"
+                android:layout_marginStart="6dp"
+
                 android:textColor="#1277d1"
                 android:lineSpacingExtra="5sp"
                 android:text="@string/client"
@@ -201,6 +205,9 @@
                     android:fontFamily="@font/segoeui_b"
                     android:textStyle="bold"
                     android:textSize="12sp"
+                    android:layout_marginStart="6dp"
+
+
                     android:textColor="#1277d1"
                     android:layout_weight="1"
                     android:lineSpacingExtra="4sp"
@@ -271,9 +278,10 @@
                 android:fontFamily="@font/segoeui_b"
                 android:textStyle="bold"
                 android:textSize="12sp"
+                android:layout_marginStart="6dp"
+
                 android:textColor="#1277d1"
                 android:layout_marginEnd="10dp"
-                android:layout_marginStart="5dp"
                 android:layout_marginTop="16dp"
                 android:lineSpacingExtra="4sp"
                 android:text="@string/choose_client"
@@ -331,6 +339,8 @@
                 app:cardBackgroundColor="#FAF5F5"
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+
                 app:cardElevation="0dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
@@ -470,32 +480,13 @@ android:text="Female , 30 Years"                            />
 
 
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                app:cornerRadius="10dp"
-                android:backgroundTint="@color/colorPrimary"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Add New Client (for test)"
-                android:textSize="9sp"
-                android:onClick="@{()->viewmodel.addNewClient()}"
-android:includeFontPadding="false"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:insetBottom="0dp"
-                android:insetTop="0dp"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:textColor="@color/colorWhite"
-                android:layout_height="40dp" />
-
-
 
 
             <LinearLayout
                 android:id="@+id/linAddNewClient"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:visibility="@{viewmodel.isNoClients ?View.VISIBLE:View.GONE , default=gone}"
+
 
                 android:layout_height="wrap_content">
 
@@ -518,13 +509,17 @@ android:includeFontPadding="false"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
+
                     android:theme="@style/Theme.MaterialComponents"
                     android:insetBottom="0dp"
+android:textAllCaps="false"
                     android:insetTop="0dp"
                     android:layout_marginTop="12dp"
                     android:layout_gravity="center"
                     app:cornerRadius="5dp"
                     android:textSize="10sp"
+                    android:includeFontPadding="false"
+
                     android:text="@string/upload_profile"
                     android:background="@android:color/transparent"
                     app:strokeColor="@color/colorPrimary"
@@ -552,6 +547,7 @@ android:includeFontPadding="false"
                         android:fontFamily="@font/segoeui_b"
                         android:textStyle="bold"
                         android:textSize="12sp"
+                        android:layout_marginStart="6dp"
                         android:textColor="#1277d1"
                         android:lineSpacingExtra="4sp"
                         android:text="@string/first_name"
@@ -592,6 +588,8 @@ android:includeFontPadding="false"
                         android:fontFamily="@font/segoeui_b"
                         android:textStyle="bold"
                         android:textSize="12sp"
+                        android:layout_marginStart="6dp"
+
                         android:textColor="#1277d1"
                         android:lineSpacingExtra="4sp"
                         android:text="@string/last_name"
@@ -641,6 +639,8 @@ android:includeFontPadding="false"
                         android:fontFamily="@font/segoeui_b"
                         android:textStyle="bold"
                         android:textSize="12sp"
+                        android:layout_marginStart="6dp"
+
                         android:textColor="#1277d1"
                         android:lineSpacingExtra="4sp"
                         android:text="@string/mobile"
@@ -696,10 +696,10 @@ android:includeFontPadding="false"
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
                         android:textDirection="ltr"
-                        android:layout_marginTop="10dp"
                         android:hint="100-300-500-2365"
                         android:inputType="text"
 android:layout_marginStart="20dp"
+                        android:layout_gravity="bottom"
                         android:textSize="10dp"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
@@ -722,6 +722,8 @@ android:layout_marginStart="20dp"
                     android:textStyle="normal"
                     android:fontFamily="@font/segoeui_b"
                     android:textSize="12sp"
+                    android:layout_marginStart="6dp"
+
                     android:layout_marginTop="10dp"
                     android:textColor="#1277d1"
                     android:lineSpacingExtra="4sp"
@@ -764,6 +766,8 @@ android:layout_marginStart="20dp"
                             android:textStyle="bold"
                             android:textSize="12sp"
                             android:textColor="#1277d1"
+                            android:layout_marginStart="6dp"
+
                             android:lineSpacingExtra="4sp"
                             android:text="@string/date_of_birth"
                             />
@@ -817,9 +821,11 @@ android:layout_marginStart="20dp"
                             android:fontFamily="@font/segoeui_b"
                             android:textStyle="bold"
                             android:textSize="12sp"
+                            android:layout_marginStart="6dp"
+
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="4sp"
-                            android:text="@string/last_name"
+                            android:text="Gender"
                             />
                         <LinearLayout
                             android:id="@+id/lin_Gender"
@@ -924,8 +930,9 @@ android:layout_marginStart="20dp"
 
                 <ImageView
                     android:layout_width="20dp"
-                    android:rotation="90"
+                    android:rotation="270"
                     android:visibility="@{viewmodel.isNoClients ?View.VISIBLE:View.GONE , default=gone}"
+
                     android:tint="@color/colorPrimary"
                     android:src="@drawable/ic_arrow_right_24dp"
                     android:layout_height="20dp" />
@@ -1034,6 +1041,8 @@ android:layout_marginStart="20dp"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
+                    android:textAllCaps="false"
+
                     android:theme="@style/Theme.MaterialComponents"
                     android:insetBottom="0dp"
                     android:includeFontPadding="false"
@@ -1066,8 +1075,9 @@ android:layout_gravity="center"
                 android:backgroundTint="#1277d1"
                 android:layout_width="140dp"
                 app:cornerRadius="10dp"
-                android:layout_marginTop="40dp"
 
+                android:layout_marginTop="40dp"
+android:textAllCaps="false"
                 android:layout_marginBottom="20dp"
                 android:text="@string/save"
                 android:textSize="15sp"

@@ -53,7 +53,7 @@
                     android:textColor="#1277d1"
                     android:lineSpacingExtra="6sp"
                     android:gravity="center_horizontal"
-                    android:text="@string/schedule" />
+                    android:text="Schedule Details" />
 
 
             </FrameLayout>
@@ -119,7 +119,6 @@
                             android:layout_height="wrap_content"
                             android:textStyle="normal"
                             android:textSize="12sp"
-                            android:layout_marginTop="3dp"
                             android:textColor="#6b6b6b"
                             android:lineSpacingExtra="4sp"
                             android:text="Consultant in Pediatric Dentistry..."
@@ -133,10 +132,8 @@
                             android:layout_height="wrap_content"
                             android:textStyle="normal"
                             android:textSize="11sp"
-                            android:layout_marginTop="3dp"
+                            android:textColor="#6b6b6b"
 
-                            android:textColor="#8d8b8b"
-                            android:lineSpacingExtra="4sp"
                             android:text="Dentist Specialized in Pediatric Dentistry..."
                             />
 
@@ -146,10 +143,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textStyle="normal"
-                            android:layout_marginTop="3dp"
                             android:textSize="11sp"
-                            android:textColor="#6b6b6b"
-                            android:lineSpacingExtra="4sp"
+
+                            android:textColor="#6b6b6b"                            android:lineSpacingExtra="4sp"
                             android:text="Ahmed Karim@gmail.com"
                             />
 
@@ -216,7 +212,6 @@
     <ImageView
         android:id="@+id/iconType"
         android:layout_width="18dp"
-        android:tint="@color/colorPrimary"
         android:src="@drawable/ic_hospital"
         android:layout_height="18dp" />
 
@@ -298,7 +293,7 @@
                             android:textSize="11sp"
                             android:textColor="#6b6b6b"
                             android:lineSpacingExtra="4sp"
-                            android:text="09:30 PM - 10:00 PM"
+android:text="Monday 11 Sep 2020"
                             />
 
 
@@ -467,7 +462,6 @@ android:padding="10dp"
                 android:textSize="11sp"
                 android:layout_marginTop="10dp"
                 android:textColor="#6b6b6b"
-                android:lineSpacingExtra="4sp"
                 android:text="It look like readable English. Many desktop publishing packages
 and web page editors now use Lorem Ipsum as their default model
 text, and a search for"
@@ -522,9 +516,8 @@ android:padding="10dp"
                 android:layout_height="wrap_content"
                 android:textStyle="normal"
                 android:textSize="11sp"
-                android:layout_marginTop="10dp"
                 android:textColor="#6b6b6b"
-                android:lineSpacingExtra="4sp"
+                android:layout_marginTop="10dp"
                 android:text="Dr. Asser Ahmed booked on 08 August 2020, Saturday"
                 />
 

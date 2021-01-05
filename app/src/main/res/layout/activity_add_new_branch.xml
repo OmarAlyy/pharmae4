@@ -48,7 +48,7 @@
                 android:textColor="#1277d1"
                 android:lineSpacingExtra="6sp"
                 android:gravity="center_horizontal"
-                android:text="@string/new_branch" />
+                android:text="Add Branches" />
 
 
         </FrameLayout>
@@ -101,6 +101,7 @@
                     android:textStyle="normal"
                     android:fontFamily="@font/segoeui_b"
                     android:textSize="12sp"
+                    android:layout_marginStart="6dp"
                     android:layout_marginTop="10dp"
                     android:textColor="#1277d1"
                     android:lineSpacingExtra="4sp"
@@ -146,6 +147,8 @@
                             android:fontFamily="@font/segoeui_b"
                             android:textStyle="normal"
                             android:textSize="12sp"
+                            android:layout_marginStart="6dp"
+
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="4sp"
                             android:text="@string/City"
@@ -211,6 +214,8 @@
                             android:fontFamily="@font/segoeui_b"
                             android:textStyle="normal"
                             android:textSize="12sp"
+                            android:layout_marginStart="6dp"
+
                             android:textColor="#1277d1"
                             android:lineSpacingExtra="4sp"
                             android:text="@string/area"
@@ -444,6 +449,8 @@
                                 android:fontFamily="@font/segoeui_b"
                                 android:textStyle="normal"
                                 android:textSize="12sp"
+                                android:layout_marginStart="6dp"
+
                                 android:textColor="#1277d1"
                                 android:lineSpacingExtra="4sp"
                                 android:text="@string/street_name"
@@ -483,6 +490,8 @@
                                 android:fontFamily="@font/segoeui_b"
                                 android:textStyle="normal"
                                 android:textSize="12sp"
+                                android:layout_marginStart="6dp"
+
                                 android:textColor="#1277d1"
                                 android:lineSpacingExtra="4sp"
                                 android:text="@string/building_number"
@@ -494,7 +503,7 @@
                                 android:paddingStart="10dp"
                                 android:textDirection="ltr"
                                 android:layout_marginTop="10dp"
-                                android:hint="@string/last_name"
+                                android:hint="Building number"
                                 android:inputType="text"
                                 android:textSize="10sp"
 
@@ -533,6 +542,8 @@
                     android:textSize="12sp"
                     android:layout_marginTop="10dp"
                     android:textColor="#1277d1"
+                    android:layout_marginStart="6dp"
+
                     android:lineSpacingExtra="4sp"
                     android:text="@string/floor" />
 
@@ -560,6 +571,8 @@
                     android:textSize="12sp"
                     android:layout_marginTop="10dp"
                     android:textColor="#1277d1"
+                    android:layout_marginStart="6dp"
+
                     android:lineSpacingExtra="4sp"
                     android:text="@string/landmark" />
 
@@ -589,6 +602,8 @@ android:paddingTop="10dp"
                     android:textSize="12sp"
                     android:layout_marginTop="10dp"
                     android:textColor="#1277d1"
+                    android:layout_marginStart="6dp"
+
                     android:lineSpacingExtra="4sp"
                     android:text="@string/location_map" />
 
@@ -652,17 +667,18 @@ android:layout_marginStart="10dp"
         <com.google.android.material.button.MaterialButton
             android:id="@+id/save"
             android:backgroundTint="#1277d1"
-            android:layout_width="140dp"
+            android:layout_width="160dp"
+            android:textAllCaps="false"
+
             app:cornerRadius="10dp"
             android:layout_marginTop="40dp"
-
             android:layout_marginBottom="30dp"
             android:text="@string/save"
-            android:textSize="15sp"
+            android:textSize="13sp"
+            android:includeFontPadding="false"
             android:layout_gravity="center"
             android:gravity="center"
             android:insetBottom="0dp"
-
             android:onClick="@{()->viewmodel.save()}"
             android:insetTop="0dp"
             style="@style/Widget.AppCompat.Button.Colored"

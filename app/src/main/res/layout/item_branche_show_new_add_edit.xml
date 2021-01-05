@@ -9,7 +9,10 @@
     android:id="@+id/card"
     android:orientation="vertical"
      app:cardElevation="6dp"
-    android:padding="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="5dp"
+    android:paddingEnd="16dp"
      android:layout_height="wrap_content">
 
 
@@ -42,7 +45,7 @@
                         android:id="@+id/area"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="normal"
+                        android:textStyle="bold"
                         android:textSize="10sp"
                         android:layout_marginStart="10dp"
                         android:textColor="#1277d1"
@@ -79,9 +82,8 @@
         android:layout_height="wrap_content"
         android:textStyle="normal"
         android:textSize="12sp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="10dp"
         android:textColor="#6b6b6b"
-        android:lineSpacingExtra="4sp"
         android:text="Cairo ,Egypt"
         />
 
@@ -89,17 +91,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="horizontal">
 
 
         <ImageView
-            android:layout_width="20dp"
+            android:layout_width="12dp"
             android:layout_gravity="top"
+            android:layout_marginTop="2dp"
             android:src="@drawable/ic_location"
-            android:layout_height="20dp" />
+            android:layout_height="14sp" />
 
         <TextView
             android:id="@+id/text"
@@ -118,7 +121,7 @@ infront of emam ali mosque New Cairo"
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:background="@color/colorPrimary"
         android:layout_height="0.5dp" />
 

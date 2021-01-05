@@ -73,7 +73,7 @@
 
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="10dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="6dp"
                     app:cardElevation="6dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
@@ -93,20 +93,22 @@
                             android:layout_height="match_parent" />
 
 
+
+
                         <ImageView
                             android:layout_width="38dp"
-                            android:padding="12dp"
                             android:layout_marginStart="12dp"
-                            android:background="@drawable/vector_drawable_circle_gray"
-                            android:src="@drawable/ic_hospital"
+                            android:src="@drawable/ic_clinic"
                             android:layout_height="38dp" />
+
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:textSize="15sp"
+android:textStyle="bold"
+                            android:textColor="#1277d1"
                             android:layout_marginStart="9dp"
-                            android:textColor="#4f4f4f"
                             android:text="@string/clinics" />
 
                         <TextView
@@ -118,10 +120,17 @@
                             android:id="@+id/ClinicsTotalVisits"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="normal"
-                            android:textSize="10sp"
                             android:layout_marginEnd="25dp"
-                            android:textColor="#4f4f4f"
+
+
+                            android:textStyle="bold"
+
+                            android:textSize="10sp"
+
+                            android:textColor="#1277d1"
+
+
+
                             android:lineSpacingExtra="4sp"
                             android:text="Total Vist" />
 
@@ -145,20 +154,24 @@
                             android:layout_height="match_parent" />
 
 
+
                         <ImageView
                             android:layout_width="38dp"
-                            android:padding="12dp"
                             android:layout_marginStart="12dp"
-                            android:background="@drawable/vector_drawable_circle_gray"
-                            android:src="@drawable/ic_medicine"
+                            android:src="@drawable/ic_pharmacy"
                             android:layout_height="38dp" />
+
+
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:textSize="15sp"
                             android:layout_marginStart="9dp"
-                            android:textColor="#4f4f4f"
+                            android:textStyle="bold"
+
+                            android:textColor="@color/colorPrimary"
+
                             android:text="@string/clinics"
                             />
                         <TextView
@@ -170,10 +183,11 @@
                             android:id="@+id/ClinicsPharmacies"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="normal"
                             android:textSize="10sp"
                             android:layout_marginEnd="25dp"
-                            android:textColor="#4f4f4f"
+                            android:textStyle="bold"
+
+                            android:textColor="@color/colorPrimary"
                             android:lineSpacingExtra="4sp"
                             android:text="Total Pharmacies 10"
                             />
@@ -198,20 +212,27 @@
                             android:layout_height="match_parent" />
 
 
+
+
                         <ImageView
                             android:layout_width="38dp"
-                            android:padding="12dp"
                             android:layout_marginStart="12dp"
-                            android:background="@drawable/vector_drawable_circle_gray"
                             android:src="@drawable/ic_phone"
                             android:layout_height="38dp" />
+
+
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
+                            android:textSize="15sp"
                             android:layout_marginStart="9dp"
-                            android:textColor="#4f4f4f"
+
+                            android:textStyle="bold"
+
+                            android:textColor="@color/colorPrimary"
+
+
                             android:text="@string/video_call"
                             />
                         <TextView
@@ -223,10 +244,12 @@
                             android:id="@+id/VideoCallTotalVisits"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="normal"
                             android:textSize="10sp"
                             android:layout_marginEnd="25dp"
-                            android:textColor="#4f4f4f"
+                            android:textStyle="bold"
+
+                            android:textColor="@color/colorPrimary"
+
                             android:lineSpacingExtra="4sp"
                             android:text="Total Video Call 20"
                             />
@@ -253,6 +276,8 @@
                         app:cardCornerRadius="10dp"
                         android:layout_weight="1"
                         app:cardElevation="6dp"
+                        android:includeFontPadding="false"
+
                         android:layout_margin="5dp"
                         android:layout_height="40dp">
 
@@ -297,6 +322,8 @@
                         android:layout_width="wrap_content"
                         app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="10dp"
+                        android:includeFontPadding="false"
+
                         android:onClick="@{()->viewmodel.openFilter()}"
                         android:visibility="@{viewmodel.type==2 ? View.GONE : View.VISIBLE }"
 
@@ -347,7 +374,9 @@
                     android:layout_width="match_parent"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="10dp"
-                    android:layout_marginTop="12dp"
+                    android:includeFontPadding="false"
+
+                    android:layout_marginTop="6dp"
                     app:cardElevation="6dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
@@ -415,7 +444,6 @@
                     android:id="@+id/list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                     android:layout_marginTop="12dp"
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     tools:itemCount="5"

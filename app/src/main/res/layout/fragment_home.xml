@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="14dp"
             app:cardElevation="6dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
@@ -55,6 +55,8 @@
                     android:id="@+id/image"
                     android:src="@drawable/test"
                     android:layout_width="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="top|center"
                     app:civ_border_color="@color/grayBottom"
                     app:civ_border_width="1dp"
                     android:layout_height="50dp" />
@@ -78,7 +80,6 @@
                             android:textStyle="bold"
                             android:fontFamily="@font/font_bold"
                             android:textColor="#1277d1"
-                            android:lineSpacingExtra="8sp"
                             android:text="@string/welcome" />
 
 
@@ -87,7 +88,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:textStyle="normal"
+                            android:textStyle="bold"
                             android:textSize="18sp"
                             android:textColor="#4f4f4f"
                             android:lineSpacingExtra="6sp"
@@ -133,7 +134,7 @@
             android:layout_width="match_parent"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="14dp"
             app:cardElevation="6dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
@@ -207,7 +208,7 @@
             android:layout_width="match_parent"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="14dp"
             app:cardElevation="6dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
@@ -226,18 +227,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_height="wrap_content">
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="normal"
+                        android:textStyle="bold"
                         android:textSize="15sp"
                         android:textColor="#1277d1"
-                        android:lineSpacingExtra="5sp"
                         android:text="Total Visits " />
 
                     <TextView
@@ -249,7 +249,7 @@
                         android:id="@+id/TotalVisits"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="normal"
+                        android:textStyle="bold"
                         android:textSize="13sp"
                         android:textColor="#1277d1"
                         android:lineSpacingExtra="4sp"
@@ -322,7 +322,6 @@
                         android:textSize="8sp"
                         android:layout_marginStart="5dp"
                         android:textColor="#8d8b8b"
-                        android:lineSpacingExtra="-1sp"
                         android:gravity="center_horizontal"
                         android:text="10 Pharmacies"
                         />
@@ -386,12 +385,11 @@ android:clickable="true"
                     android:layout_height="match_parent" />
 
 
+
                 <ImageView
                     android:layout_width="38dp"
-                    android:padding="12dp"
                     android:layout_marginStart="12dp"
-                    android:background="@drawable/vector_drawable_circle_gray"
-                    android:src="@drawable/ic_hospital"
+                    android:src="@drawable/ic_clinic"
                     android:layout_height="38dp" />
 
                 <TextView
@@ -419,7 +417,7 @@ android:clickable="true"
                     android:textColor="#4f4f4f"
                     android:layout_marginEnd="25dp"
                     android:lineSpacingExtra="4sp"
-                    android:text="Total Vist"
+                    android:text="Total Vist 10"
                     />
 
 
@@ -458,10 +456,8 @@ android:clickable="true"
 
                 <ImageView
                     android:layout_width="38dp"
-                    android:padding="12dp"
                     android:layout_marginStart="12dp"
-                    android:background="@drawable/vector_drawable_circle_gray"
-                    android:src="@drawable/ic_medicine"
+                    android:src="@drawable/ic_pharmacy"
                     android:layout_height="38dp" />
 
                 <TextView
@@ -488,7 +484,7 @@ android:clickable="true"
                     android:layout_marginEnd="25dp"
                     android:textColor="#4f4f4f"
                     android:lineSpacingExtra="4sp"
-                    android:text="Total Pharmacies 10"
+                    android:text="Total Vist 10"
                     />
 
 
@@ -528,9 +524,7 @@ android:layout_marginBottom="10dp"
 
                 <ImageView
                     android:layout_width="38dp"
-                    android:padding="12dp"
                     android:layout_marginStart="12dp"
-                    android:background="@drawable/vector_drawable_circle_gray"
                     android:src="@drawable/ic_phone"
                     android:layout_height="38dp" />
 
@@ -558,7 +552,7 @@ android:layout_marginBottom="10dp"
                     android:layout_marginEnd="25dp"
                     android:textColor="#4f4f4f"
                     android:lineSpacingExtra="4sp"
-                    android:text="Total Video Call 20"
+                    android:text="Total Call 20"
                     />
 
 

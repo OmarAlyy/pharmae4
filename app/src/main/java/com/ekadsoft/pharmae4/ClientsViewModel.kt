@@ -33,7 +33,7 @@ class ClientsViewModel : ViewModel() {
             ArrayList<ClientsModel>()
 
 
-        for (i in 1..3) {
+        for (i in 1..2) {
             list.add(ClientsModel())
 
         }
